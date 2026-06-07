@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teide — Glide the Canaries</title>
+<meta name="description" content="Teide: Glide the Canaries — minimalistisches Papierflieger-Gleitspiel über den echten Kanarischen Inseln. Reite die Thermik, entdecke Points of Interest und lande auf echten Pisten.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Teide — Glide the Canaries">
+<meta property="og:description" content="Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln.">
+<meta property="og:image" content="assets/og-image.png">
+<!-- PLATZHALTER: finale URL nach Deploy eintragen -->
+<meta property="og:url" content="https://example.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Teide — Startseite">
+      <img class="brand-logo" src="assets/Logo.webp" alt="" width="34" height="34">
+      <span class="brand-text">
+        <span class="brand-name">Teide</span>
+        <span class="brand-sub">Glide the Canaries</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="#features">Features</a>
+      <a href="#inseln">Inseln</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#download">Download</a>
+      <a class="btn btn-coral nav-cta" href="https://swissinnovationstudios.github.io/teide-game/">Spielen</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Menü" aria-expanded="false">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <span class="hero-eyebrow">Teide</span>
+      <h1>Gleite über die<br><span class="tint">Kanarischen Inseln</span></h1>
+      <p class="hero-lead">
+        Ein selbstgefalteter Papierflieger, echtes Gelände aus Höhendaten und nichts als
+        Thermik unter den Flügeln. Starte vom Teide, reite die Aufwinde und sieh, wie
+        weit du gleiten kannst — von La Gomera bis Lanzarote.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-coral" href="https://swissinnovationstudios.github.io/teide-game/">
+          <span class="material-symbols-outlined">flight_takeoff</span> Im Browser spielen
+        </a>
+        <!-- PLATZHALTER: Store-Links eintragen -->
+        <div class="store-badges">
+          <a class="store-badge is-soon" href="#" aria-disabled="true" aria-label="App Store (bald)">
+            <span class="material-symbols-outlined">phone_iphone</span>
+            <span class="store-badge-text"><small>Laden im</small><span>App&nbsp;Store</span></span>
+          </a>
+          <a class="store-badge is-soon" href="#" aria-disabled="true" aria-label="Google Play (bald)">
+            <span class="material-symbols-outlined">play_arrow</span>
+            <span class="store-badge-text"><small>Jetzt bei</small><span>Google&nbsp;Play</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span><span class="material-symbols-outlined">wifi_off</span> Offline spielbar</span>
+        <span><span class="material-symbols-outlined">block</span> Keine Werbung</span>
+        <span><span class="material-symbols-outlined">public</span> 7 Inseln</span>
+      </div>
+    </div>
+
+    <!-- Hand-built low-poly scene: ocean, islands w/ Teide, sun, clouds,
+         dashed flight path + a gently gliding paper plane. -->
+    <div class="hero-art reveal" data-delay="2" data-parallax="-0.04" aria-hidden="true">
+      <div class="hero-stage">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Papierflieger gleitet über die Kanarischen Inseln">
+          <defs>
+            <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E8746F"/>
+              <stop offset="0.35" stop-color="#E89A77"/>
+              <stop offset="0.7" stop-color="#EAC6A0"/>
+              <stop offset="1" stop-color="#F4F1E8"/>
+            </linearGradient>
+            <linearGradient id="g-ocean" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7FA6B8"/>
+              <stop offset="1" stop-color="#345C76"/>
+            </linearGradient>
+            <radialGradient id="g-sun" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#FCE7C8"/>
+              <stop offset="0.5" stop-color="#F6C98B" stop-opacity="0.55"/>
+              <stop offset="1" stop-color="#F6C98B" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="g-teide" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#C98D6E"/>
+              <stop offset="1" stop-color="#8E5B49"/>
+            </linearGradient>
+            <linearGradient id="g-isle" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6FA06A"/>
+              <stop offset="1" stop-color="#3F6E4C"/>
+            </linearGradient>
+            <clipPath id="frame"><rect x="0" y="0" width="520" height="420" rx="26"/></clipPath>
+          </defs>
+
+          <g clip-path="url(#frame)">
+            <!-- Sky -->
+            <rect x="0" y="0" width="520" height="420" fill="url(#g-sky)"/>
+            <!-- Sun + glow -->
+            <circle class="sun-glow" cx="392" cy="96" r="120" fill="url(#g-sun)"/>
+            <circle cx="392" cy="96" r="34" fill="#FBE7C6"/>
+            <!-- Clouds -->
+            <g class="cloud" fill="#F4F1E8" opacity="0.7">
+              <ellipse cx="120" cy="78" rx="46" ry="13"/>
+              <ellipse cx="150" cy="70" rx="30" ry="11"/>
+            </g>
+            <g class="cloud cloud-2" fill="#F4F1E8" opacity="0.55">
+              <ellipse cx="300" cy="150" rx="38" ry="10"/>
+              <ellipse cx="326" cy="144" rx="24" ry="8"/>
+            </g>
+
+            <!-- Distant faint island -->
+            <path d="M -10 250 L 60 214 L 130 250 Z" fill="#6E8A8E" opacity="0.45"/>
+
+            <!-- Ocean -->
+            <path d="M 0 250 H 520 V 420 H 0 Z" fill="url(#g-ocean)"/>
+            <!-- water shimmer -->
+            <g stroke="#F4F1E8" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round">
+              <line x1="60" y1="300" x2="120" y2="300"/>
+              <line x1="200" y1="330" x2="280" y2="330"/>
+              <line x1="360" y1="306" x2="420" y2="306"/>
+              <line x1="120" y1="364" x2="210" y2="364"/>
+            </g>
+
+            <!-- Main island with the Teide volcano (low-poly) -->
+            <g>
+              <!-- island base -->
+              <path d="M 70 268 L 150 236 L 250 244 L 320 270 L 250 286 L 130 286 Z" fill="url(#g-isle)"/>
+              <path d="M 150 236 L 250 244 L 200 252 Z" fill="#7CAE74" opacity="0.7"/>
+              <!-- volcano -->
+              <path d="M 150 252 L 196 168 L 244 252 Z" fill="url(#g-teide)"/>
+              <!-- sunlit face -->
+              <path d="M 196 168 L 244 252 L 210 246 Z" fill="#D8A07E" opacity="0.85"/>
+              <!-- snow cap -->
+              <path d="M 182 196 L 196 168 L 212 198 L 197 192 Z" fill="#F4F1E8"/>
+              <!-- crater notch -->
+              <path d="M 188 178 L 196 168 L 204 178 L 196 184 Z" fill="#6E4537" opacity="0.6"/>
+            </g>
+
+            <!-- Smaller island, right -->
+            <g>
+              <path d="M 360 274 L 410 252 L 470 268 L 500 282 L 430 290 Z" fill="url(#g-isle)"/>
+              <path d="M 410 252 L 470 268 L 440 272 Z" fill="#7CAE74" opacity="0.7"/>
+            </g>
+
+            <!-- Dashed flight path -->
+            <path class="flight-path" d="M 40 360 C 150 320 150 170 270 150 S 420 120 470 70"
+                  fill="none" stroke="#2A3338" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.7"/>
+
+            <!-- Paper plane at the head of the path -->
+            <g class="plane-bob" transform="translate(452 64)">
+              <!-- soft shadow -->
+              <ellipse cx="4" cy="34" rx="22" ry="5" fill="#2A3338" opacity="0.12"/>
+              <!-- underside (darker fold) -->
+              <path d="M -28 -12 L 26 8 L -6 14 Z" fill="#C9C6BC"/>
+              <!-- top fold (lighter) -->
+              <path d="M -28 -12 L 26 8 L -4 0 Z" fill="#F4F1E8"/>
+              <!-- right wing -->
+              <path d="M 26 8 L -6 14 L -4 0 Z" fill="#E4E0D5"/>
+              <!-- crease -->
+              <line x1="-28" y1="-12" x2="-4" y2="6" stroke="#9C9A90" stroke-width="1.2" stroke-opacity="0.7"/>
+            </g>
+          </g>
+
+          <!-- thin frame -->
+          <rect x="1" y="1" width="518" height="418" rx="26" fill="none" stroke="#2A3338" stroke-opacity="0.12"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#pitch" aria-label="Weiter">
+    <span>Scroll</span>
+    <span class="material-symbols-outlined">expand_more</span>
+  </a>
+</section>
+
+<!-- ===================== PITCH ===================== -->
+<section class="section pitch" id="pitch">
+  <div class="wrap">
+    <p class="eyebrow accent reveal">Worum geht's</p>
+    <p class="pitch-quote reveal" data-delay="1">
+      Du hast den perfekten Papierflieger gefaltet und ihn von den Hängen des
+      <span class="tint">Teide</span> gestartet. Jetzt zählt nur eins: <span class="tint">oben bleiben.</span>
+    </p>
+    <p class="pitch-sub reveal" data-delay="2">
+      Fang Aufwinde ein, flieg durch Points of Interest, um Gofios zu sammeln, und
+      lande auf echten Pisten, um sie als neue Startpunkte freizuschalten. Gib deine
+      Punkte im Hangar aus und verbessere Flugzeug und Booster — gleitest du weit
+      genug, kommen neue Inseln in Reichweite.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow accent">Features</p>
+      <h2 class="section-title">Ein Spiel, so ruhig wie ein Gleitflug</h2>
+      <p class="section-sub">
+        Kein Stress, kein Timer — nur du, der Wind und ein Archipel aus echten
+        Höhendaten. Minimalistisch im Look, überraschend tief im Detail.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="card feature reveal" data-delay="1">
+        <span class="feature-icon"><span class="material-symbols-outlined">landscape</span></span>
+        <h3>Echtes Gelände</h3>
+        <p>Die Inseln stammen aus echten SRTM-Höhendaten — vom 3.715 m hohen Teide bis zu den Dünen im Osten.</p>
+      </article>
+      <article class="card feature reveal" data-delay="2">
+        <span class="feature-icon"><span class="material-symbols-outlined">air</span></span>
+        <h3>Thermik &amp; Aufwinde</h3>
+        <p>Reite unsichtbare Aufwinde, um Höhe zu gewinnen. Wer die Thermik liest, gleitet am weitesten.</p>
+      </article>
+      <article class="card feature reveal" data-delay="3">
+        <span class="feature-icon"><span class="material-symbols-outlined">explore</span></span>
+        <h3>Points of Interest</h3>
+        <p>Entdecke Gipfel, Städte, Strände und Landschaften. Flieg durch die Ringe und sammle Gofios.</p>
+      </article>
+      <article class="card feature accent reveal" data-delay="4">
+        <span class="feature-icon"><span class="material-symbols-outlined">flight_land</span></span>
+        <h3>Pisten &amp; Levels</h3>
+        <p>Lande sauber auf echten Flughäfen und schalte sie als neue Spawnpunkte für deinen nächsten Flug frei.</p>
+      </article>
+      <article class="card feature reveal" data-delay="1">
+        <span class="feature-icon"><span class="material-symbols-outlined">build</span></span>
+        <h3>Hangar &amp; Upgrades</h3>
+        <p>Verbessere Aerodynamik, Spitzentempo, Stabilität und Booster — und falte dir den perfekten Gleiter.</p>
+      </article>
+      <article class="card feature reveal" data-delay="2">
+        <span class="feature-icon"><span class="material-symbols-outlined">rocket_launch</span></span>
+        <h3>Booster &amp; Reichweite</h3>
+        <p>Sammle genug Gofios und dein One-Shot-Booster wächst — bis die nächste Insel in Reichweite liegt.</p>
+      </article>
+      <article class="card feature reveal" data-delay="3">
+        <span class="feature-icon"><span class="material-symbols-outlined">palette</span></span>
+        <h3>Minimalistischer Look</h3>
+        <p>Ruhige Low-Poly-Optik in Papier &amp; Tinte. Eine klare HUD, die nie im Weg steht.</p>
+      </article>
+      <article class="card feature accent reveal" data-delay="4">
+        <span class="feature-icon"><span class="material-symbols-outlined">wifi_off</span></span>
+        <h3>Offline &amp; fair</h3>
+        <p>Läuft komplett offline. Kein Account, keine Werbung, kein Tracking — dein Spielstand bleibt auf dem Gerät.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ISLANDS ===================== -->
+<section class="section" id="inseln">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow accent">Das Archipel</p>
+      <h2 class="section-title">Sieben Inseln, ein Horizont</h2>
+      <p class="section-sub">
+        Jede Insel ist ein eigenes Ziel. Je stärker dein Booster, desto weiter reicht
+        dein Gleitflug — von den Westinseln bis zu den Vulkanfeldern im Osten.
+      </p>
+    </div>
+
+    <div class="islands-strip reveal" data-delay="1">
+      <article class="card island">
+        <span class="island-rank">01 · West</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L34 30 L52 44 L74 18 L104 60 Z" fill="#3F6E4C"/><path d="M74 18 L104 60 L88 56 Z" fill="#6FA06A" opacity="0.7"/></svg></span>
+        <h3>El Hierro</h3>
+        <span class="island-tag"><span class="dot t2"></span> Westkurs</span>
+        <p>Der westlichste Vorposten — der weiteste Punkt deiner Reise.</p>
+      </article>
+
+      <article class="card island">
+        <span class="island-rank">02 · West</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L40 22 L66 40 L92 26 L118 60 Z" fill="#3F6E4C"/><path d="M40 22 L66 40 L52 36 Z" fill="#6FA06A" opacity="0.7"/></svg></span>
+        <h3>La Palma</h3>
+        <span class="island-tag"><span class="dot t2"></span> Westkurs</span>
+        <p>„La Isla Bonita" — grüne Steilküsten ganz im Westen.</p>
+      </article>
+
+      <article class="card island">
+        <span class="island-rank">03 · West</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M4 60 L36 34 L58 48 L82 30 L116 60 Z" fill="#3F6E4C"/><path d="M82 30 L116 60 L98 54 Z" fill="#6FA06A" opacity="0.7"/></svg></span>
+        <h3>La Gomera</h3>
+        <span class="island-tag"><span class="dot t2"></span> In Reichweite</span>
+        <p>Steile Schluchten — der erste Sprung, sobald Booster Stufe 2 sitzt.</p>
+      </article>
+
+      <article class="card island home">
+        <span class="island-rank">★ · Start</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L30 40 L60 60 L92 44 L118 60 Z" fill="#3F6E4C"/><path d="M44 60 L60 16 L78 60 Z" fill="#8E5B49"/><path d="M60 16 L78 60 L66 54 Z" fill="#D8A07E" opacity="0.85"/><path d="M52 28 L60 16 L69 28 L60 24 Z" fill="#F4F1E8"/></svg></span>
+        <h3>Tenerife</h3>
+        <span class="island-tag"><span class="dot t4"></span> Heimatinsel</span>
+        <p>Dein Startpunkt und Heimat des Teide — mit 3.715 m der höchste Gipfel Spaniens.</p>
+      </article>
+
+      <article class="card island">
+        <span class="island-rank">04 · Ost</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L38 30 L70 46 L96 32 L118 60 Z" fill="#3F6E4C"/><path d="M38 30 L70 46 L54 42 Z" fill="#6FA06A" opacity="0.7"/></svg></span>
+        <h3>Gran Canaria</h3>
+        <span class="island-tag"><span class="dot t3"></span> Weiter Flug</span>
+        <p>Ein Kontinent im Kleinen — runde Insel, viele Mikroklimata.</p>
+      </article>
+
+      <article class="card island">
+        <span class="island-rank">05 · Ost</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L50 40 L80 50 L110 42 L118 60 Z" fill="#C98D6E"/><path d="M50 40 L80 50 L66 47 Z" fill="#E2B393" opacity="0.7"/></svg></span>
+        <h3>Fuerteventura</h3>
+        <span class="island-tag"><span class="dot t4"></span> Fernziel</span>
+        <p>Endlose Dünen und flache Weiten — nur für die stärksten Booster.</p>
+      </article>
+
+      <article class="card island">
+        <span class="island-rank">06 · Ost</span>
+        <span class="island-glyph"><svg viewBox="0 0 120 64"><path d="M2 60 L40 42 L62 50 L86 38 L118 60 Z" fill="#B0705A"/><path d="M40 42 L62 50 L52 47 Z" fill="#D8A07E" opacity="0.7"/></svg></span>
+        <h3>Lanzarote</h3>
+        <span class="island-tag"><span class="dot t4"></span> Fernziel</span>
+        <p>Schwarze Vulkanfelder am östlichen Horizont — das Ende der Welt.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SCREENSHOTS ===================== -->
+<section class="section" id="screenshots">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow accent">Screenshots</p>
+      <h2 class="section-title">Sieh es selbst</h2>
+      <p class="section-sub">Gespielt wird im Querformat — für den vollen Blick auf den Horizont.</p>
+    </div>
+
+    <div class="shots">
+      <!-- PLATZHALTER: Screenshots im Querformat (~19,5:9) unter assets/screens/
+           als shot-1.png … shot-4.png ablegen. Sobald vorhanden, in jeder Kachel
+           den Platzhalter-Block (class "shot-placeholder") durch ein Bild ersetzen,
+           z. B.  img mit src="assets/screens/shot-1.png" und passendem alt-Text. -->
+      <figure class="phone reveal" data-delay="1">
+        <div class="phone-screen">
+          <div class="shot-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <span>Screenshot 1</span>
+            <small>assets/screens/shot-1.png</small>
+          </div>
+        </div>
+      </figure>
+      <figure class="phone reveal" data-delay="2">
+        <div class="phone-screen">
+          <div class="shot-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <span>Screenshot 2</span>
+            <small>assets/screens/shot-2.png</small>
+          </div>
+        </div>
+      </figure>
+      <figure class="phone reveal" data-delay="1">
+        <div class="phone-screen">
+          <div class="shot-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <span>Screenshot 3</span>
+            <small>assets/screens/shot-3.png</small>
+          </div>
+        </div>
+      </figure>
+      <figure class="phone reveal" data-delay="2">
+        <div class="phone-screen">
+          <div class="shot-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <span>Screenshot 4</span>
+            <small>assets/screens/shot-4.png</small>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOWNLOAD CTA ===================== -->
+<section class="section" id="download">
+  <div class="wrap">
+    <div class="cta reveal">
+      <svg class="cta-plane" viewBox="0 0 60 40" aria-hidden="true">
+        <path d="M2 14 L58 30 L24 34 Z" fill="#ffffff" opacity="0.9"/>
+        <path d="M2 14 L58 30 L26 22 Z" fill="#ffffff"/>
+      </svg>
+      <h2>Bereit zum Abheben?</h2>
+      <p>
+        Falte deinen Flieger, starte vom Teide und finde heraus, wie weit du gleiten
+        kannst. Jetzt im Browser spielbar — bald für iOS und Android.
+      </p>
+      <p style="margin-top:-8px;">
+        <a class="btn btn-light" href="https://swissinnovationstudios.github.io/teide-game/">
+          <span class="material-symbols-outlined">flight_takeoff</span> Im Browser spielen
+        </a>
+      </p>
+      <!-- PLATZHALTER: Store-Links eintragen -->
+      <div class="store-badges">
+        <a class="store-badge is-soon" href="#" aria-disabled="true" aria-label="App Store (bald)">
+          <span class="material-symbols-outlined">phone_iphone</span>
+          <span class="store-badge-text"><small>Laden im</small><span>App&nbsp;Store</span></span>
+        </a>
+        <a class="store-badge is-soon" href="#" aria-disabled="true" aria-label="Google Play (bald)">
+          <span class="material-symbols-outlined">play_arrow</span>
+          <span class="store-badge-text"><small>Jetzt bei</small><span>Google&nbsp;Play</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Teide — Startseite">
+          <img class="brand-logo" src="assets/Logo.webp" alt="" width="34" height="34">
+          <span class="brand-text">
+            <span class="brand-name">Teide</span>
+            <span class="brand-sub">Glide the Canaries</span>
+          </span>
+        </a>
+        <p>Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln. Gebaut mit Three.js.</p>
+      </div>
+      <nav class="footer-col" aria-label="Seite">
+        <h4>Seite</h4>
+        <a href="#features">Features</a>
+        <a href="#inseln">Inseln</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#download">Download</a>
+      </nav>
+      <nav class="footer-col" aria-label="Rechtliches">
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="lizenzen.html">Open-Source-Lizenzen</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>
+        <p>Swiss Innovation Studios<br>9443 Widnau, Schweiz</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Swiss Innovation Studios</span>
+      <span>Made with Three.js · Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
