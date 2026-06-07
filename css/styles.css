@@ -1,8 +1,9 @@
 /* =============================================================================
    Teide — Marketing site design system.
-   Mirrors the in-game language: Inconsolata, paper #F4F1E8 / ink #2A3338 /
-   sky #C5D3DC, frosted-glass cards, uppercase tracked eyebrows, thin borders.
-   No build step — plain CSS. Fonts are self-hosted (copied from src/fonts/).
+   Mirrors the in-game language: Inconsolata, frosted-glass cards, uppercase
+   tracked eyebrows, thin borders. Palette derived from the real key-art:
+   sage #b7c9bd (light/base), meadow green #536e43 (accent), ocean teal,
+   ink #2A3338, paper #F4F1E8. No build step — plain CSS.
    ========================================================================== */
 
 /* ---- Fonts (self-hosted, mirrors src/style.css) -------------------------- */
@@ -34,23 +35,27 @@
 
 /* ---- Tokens -------------------------------------------------------------- */
 :root {
-  --sky:        #C5D3DC;
-  --sky-deep:   #A9BfCC;
+  --sky:        #b7c9bd;   /* sage — the light base tone */
+  --sky-deep:   #a3b8ac;
   --paper:      #F4F1E8;
   --ink:        #2A3338;
   --ink-2:      #1d262b;
-  --coral:      #E85F5C;
-  --coral-2:    #E07A5F;
-  --gold:       #C2A557;
-  --green:      #4C8659;
-  --terracotta: #B97A5E;
-  --ocean:      #345C76;
+
+  --green:      #536e43;   /* meadow green — primary accent */
+  --green-2:    #44592f;   /* darker, for hover */
+  --sage-2:     #7a9466;
+  --teal:       #2e7d96;   /* ocean accent (from the key-art) */
+  --teal-deep:  #234e63;
 
   --ink-08: rgba(42, 51, 56, 0.08);
   --ink-12: rgba(42, 51, 56, 0.12);
   --ink-18: rgba(42, 51, 56, 0.18);
   --ink-45: rgba(42, 51, 56, 0.45);
   --ink-70: rgba(42, 51, 56, 0.70);
+
+  --green-08: rgba(83, 110, 67, 0.08);
+  --green-12: rgba(83, 110, 67, 0.12);
+  --green-30: rgba(83, 110, 67, 0.30);
 
   --glass:        rgba(244, 241, 232, 0.32);
   --glass-strong: rgba(244, 241, 232, 0.55);
@@ -83,17 +88,17 @@ body {
   overflow-x: hidden;
 }
 
-/* Soft, slowly-drifting sky gradient with a warm sunset glow in one corner —
-   marries the cool in-game sky with the warm icon/key-art palette. */
+/* Soft, slowly-drifting sage→paper backdrop with a faint ocean-teal glow —
+   echoes the cool key-art palette without fighting the hero image. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(120% 90% at 85% -10%, rgba(232, 95, 92, 0.20), rgba(232, 95, 92, 0) 55%),
-    radial-gradient(120% 80% at 10% 0%,  rgba(224, 122, 95, 0.16), rgba(224, 122, 95, 0) 50%),
-    linear-gradient(180deg, var(--sky) 0%, #D7E0E5 45%, var(--paper) 100%);
+    radial-gradient(120% 90% at 85% -10%, rgba(46, 125, 150, 0.14), rgba(46, 125, 150, 0) 55%),
+    radial-gradient(120% 80% at 8% 0%,   rgba(83, 110, 67, 0.10), rgba(83, 110, 67, 0) 50%),
+    linear-gradient(180deg, var(--sky) 0%, #ccd9ce 45%, var(--paper) 100%);
   background-size: 100% 100%, 100% 100%, 100% 200%;
   animation: skyDrift 26s ease-in-out infinite alternate;
 }
@@ -102,10 +107,10 @@ body::before {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
-::selection { background: rgba(232, 95, 92, 0.28); }
+::selection { background: rgba(83, 110, 67, 0.26); }
 
 :focus-visible {
-  outline: 2px solid var(--coral);
+  outline: 2px solid var(--green);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -136,7 +141,7 @@ a { color: inherit; text-decoration: none; }
   opacity: 0.6;
   margin-bottom: 14px;
 }
-.eyebrow.accent { color: var(--coral); opacity: 0.9; }
+.eyebrow.accent { color: var(--green); opacity: 0.95; }
 
 .section { padding: clamp(64px, 10vw, 130px) 0; position: relative; }
 .section-head { max-width: 640px; margin-bottom: clamp(36px, 5vw, 56px); }
@@ -180,21 +185,22 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 .btn:active { transform: translateY(0); }
 
-.btn-primary { background: var(--ink); color: var(--sky); border-color: var(--ink); }
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .btn-primary:hover { background: var(--ink-2); box-shadow: var(--shadow-md); }
 
-.btn-coral { background: var(--coral); border-color: var(--coral); color: #fff; }
-.btn-coral:hover { background: #df4f4c; border-color: #df4f4c; box-shadow: 0 12px 30px rgba(232, 95, 92, 0.4); }
+/* Accent button (meadow green). Class name kept as .btn-coral so existing
+   markup needn't change — it is the green accent CTA throughout. */
+.btn-coral { background: var(--green); border-color: var(--green); color: #fff; }
+.btn-coral:hover { background: var(--green-2); border-color: var(--green-2); box-shadow: 0 12px 30px rgba(83, 110, 67, 0.4); }
 
 .btn-ghost { background: var(--glass); border-color: var(--glass-border); }
 .btn-ghost:hover { background: var(--glass-strong); }
 
-/* White button for use on the coral CTA band */
+/* White button for use on the green CTA band */
 .btn-light { background: #fff; border-color: #fff; color: var(--ink); }
 .btn-light:hover { background: #fff; box-shadow: var(--shadow-md); }
 
-/* Store badges — frosted glass tiles, "icon + two-line label". Placeholder
-   links until store URLs exist. */
+/* Store badges — "icon + two-line label". Placeholder links until store URLs exist. */
 .store-badges { display: flex; flex-wrap: wrap; gap: 14px; }
 .store-badge {
   display: inline-flex;
@@ -202,7 +208,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   gap: 12px;
   padding: 11px 20px 11px 16px;
   background: var(--ink);
-  color: var(--sky);
+  color: var(--paper);
   border: 1px solid var(--ink);
   border-radius: 14px;
   transition: transform 0.18s var(--ease), box-shadow 0.25s, opacity 0.2s;
@@ -222,7 +228,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   font-size: 8px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background: var(--coral);
+  background: var(--green);
   color: #fff;
   padding: 2px 7px;
   border-radius: 999px;
@@ -242,7 +248,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(197, 211, 220, 0.72);
+  background: rgba(183, 201, 189, 0.78);
   backdrop-filter: blur(16px) saturate(1.05);
   -webkit-backdrop-filter: blur(16px) saturate(1.05);
   border-bottom-color: var(--ink-12);
@@ -296,7 +302,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 }
 .hero .wrap {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1.02fr 1fr;
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
 }
@@ -323,7 +329,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   letter-spacing: -0.01em;
   font-weight: 500;
 }
-.hero h1 .tint { color: var(--coral); }
+.hero h1 .tint { color: var(--green); }
 .hero-lead {
   margin-top: 24px;
   max-width: 30em;
@@ -363,46 +369,49 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .scroll-cue .material-symbols-outlined { font-size: 20px; animation: bob 1.8s ease-in-out infinite; }
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 
-/* ---- Hero illustration (SVG scene) -------------------------------------- */
+/* ---- Hero illustration (real low-poly key-art + a gliding paper plane) --- */
 .hero-art { position: relative; }
 .hero-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 5 / 4;
-  filter: drop-shadow(0 30px 50px rgba(42, 51, 56, 0.18));
+  aspect-ratio: 16 / 9;
+  filter: drop-shadow(0 30px 50px rgba(42, 51, 56, 0.22));
 }
-.hero-stage svg { width: 100%; height: 100%; display: block; overflow: visible; }
-
-/* The paper plane group gets a gentle endless glide-bob. */
-.plane-bob { animation: glide 7s ease-in-out infinite; transform-origin: center; }
-@keyframes glide {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  25%  { transform: translate(6px, -10px) rotate(-1.5deg); }
-  50%  { transform: translate(12px, 4px) rotate(0.5deg); }
-  75%  { transform: translate(4px, 12px) rotate(-0.5deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-/* Dashed flight path draws itself in, then loops a slow march. */
-.flight-path {
-  stroke-dasharray: 7 9;
-  animation: dashDraw 2.4s var(--ease) forwards, dashMarch 18s linear 2.4s infinite;
-}
-@keyframes dashDraw  { from { stroke-dashoffset: 620; opacity: 0; } to { stroke-dashoffset: 0; opacity: 0.7; } }
-@keyframes dashMarch { to { stroke-dashoffset: -320; } }
-.cloud { animation: cloudFloat 16s ease-in-out infinite; }
-.cloud.cloud-2 { animation-duration: 22s; animation-delay: -6s; }
-@keyframes cloudFloat { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-16px); } }
-.sun-glow { transform-origin: center; animation: pulse 6s ease-in-out infinite; }
-@keyframes pulse { 0%,100% { opacity: 0.8; } 50% { opacity: 1; } }
-
-/* Floating feature-graphic frame (used when assets/feature-graphic.png exists) */
-.hero-keyart {
-  position: relative;
+.hero-scene {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-lg);
+  display: block;
+  box-shadow: inset 0 0 0 1px rgba(42, 51, 56, 0.10);
 }
+/* The paper plane floats over the archipelago in an endless glide. */
+.hero-plane {
+  position: absolute;
+  top: 16%;
+  left: 22%;
+  width: 44%;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 16px rgba(42, 51, 56, 0.30));
+  animation: heroGlide 9s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes heroGlide {
+  0%   { transform: translate(-9%, 11%) rotate(-3deg); }
+  50%  { transform: translate(11%, -9%) rotate(2deg); }
+  100% { transform: translate(-9%, 11%) rotate(-3deg); }
+}
+
+/* Decorative drifting plane in the CTA band (kept as an inline SVG there). */
+.cta-plane {
+  position: absolute;
+  top: 14%; right: -4%;
+  width: 130px;
+  opacity: 0.5;
+  animation: ctaGlide 12s ease-in-out infinite;
+}
+@keyframes ctaGlide { 0%,100% { transform: translate(0,0) rotate(-8deg);} 50% { transform: translate(-26px,16px) rotate(-3deg);} }
 
 /* =============================================================================
    Generic frosted card
@@ -435,7 +444,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   font-weight: 500;
   letter-spacing: -0.005em;
 }
-.pitch-quote .tint { color: var(--coral); }
+.pitch-quote .tint { color: var(--green); }
 .pitch-sub {
   max-width: 44em;
   margin: 26px auto 0;
@@ -474,8 +483,8 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   text-transform: uppercase;
 }
 .feature p { font-size: 13px; color: var(--ink-70); line-height: 1.7; }
-/* Coral accent on every 4th tile to break the grid rhythm */
-.feature.accent .feature-icon { background: rgba(232, 95, 92, 0.12); border-color: rgba(232, 95, 92, 0.3); color: var(--coral); }
+/* Green accent on every 4th tile to break the grid rhythm */
+.feature.accent .feature-icon { background: var(--green-12); border-color: var(--green-30); color: var(--green); }
 
 /* =============================================================================
    Islands — horizontal compass-strip of the seven Canaries
@@ -523,11 +532,11 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 }
 .island-tag .dot { width: 8px; height: 8px; border-radius: 50%; }
 .island-tag .dot.t1 { background: var(--green); }
-.island-tag .dot.t2 { background: var(--gold); }
-.island-tag .dot.t3 { background: var(--terracotta); }
-.island-tag .dot.t4 { background: var(--coral); }
+.island-tag .dot.t2 { background: var(--sage-2); }
+.island-tag .dot.t3 { background: var(--teal); }
+.island-tag .dot.t4 { background: var(--teal-deep); }
 .island p { font-size: 12px; color: var(--ink-70); line-height: 1.6; }
-.island.home { background: rgba(232, 95, 92, 0.08); border-color: rgba(232, 95, 92, 0.28); }
+.island.home { background: var(--green-08); border-color: var(--green-30); }
 
 /* =============================================================================
    Screenshots — landscape phone mockups (game is landscape-only)
@@ -553,7 +562,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   border-radius: 22px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(244,241,232,0.5), rgba(197,211,220,0.7)),
+    radial-gradient(ellipse at 50% 30%, rgba(244,241,232,0.5), rgba(183,201,189,0.7)),
     var(--sky);
   display: flex;
   align-items: center;
@@ -595,8 +604,8 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   text-align: center;
   color: #fff;
   background:
-    radial-gradient(120% 140% at 20% -20%, rgba(255,255,255,0.22), rgba(255,255,255,0) 50%),
-    linear-gradient(135deg, var(--coral) 0%, var(--coral-2) 60%, var(--gold) 130%);
+    radial-gradient(120% 140% at 20% -20%, rgba(255,255,255,0.20), rgba(255,255,255,0) 50%),
+    linear-gradient(135deg, var(--green) 0%, #41614a 55%, var(--teal) 135%);
   box-shadow: var(--shadow-lg);
 }
 .cta h2 { font-size: clamp(28px, 4.6vw, 50px); letter-spacing: -0.01em; }
@@ -604,15 +613,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .cta .store-badges { justify-content: center; }
 .cta .store-badge { background: #fff; color: var(--ink); border-color: #fff; }
 .cta .store-badge[aria-disabled="true"] { opacity: 0.78; }
-/* Decorative drifting plane in the band */
-.cta-plane {
-  position: absolute;
-  top: 14%; right: -4%;
-  width: 130px;
-  opacity: 0.5;
-  animation: ctaGlide 12s ease-in-out infinite;
-}
-@keyframes ctaGlide { 0%,100% { transform: translate(0,0) rotate(-8deg);} 50% { transform: translate(-26px,16px) rotate(-3deg);} }
+.cta .store-badge.is-soon::after { background: var(--ink); color: #fff; }
 
 /* =============================================================================
    Footer
@@ -674,7 +675,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   font-size: clamp(30px, 5vw, 48px);
   letter-spacing: -0.01em;
 }
-.legal-head .eyebrow { color: var(--coral); opacity: 0.9; }
+.legal-head .eyebrow { color: var(--green); opacity: 0.95; }
 .legal-updated {
   margin-top: 14px;
   font-size: 11px;
@@ -715,7 +716,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .legal-card li { font-size: 14px; line-height: 1.8; margin-bottom: 6px; }
 .legal-card a {
   color: var(--ink);
-  border-bottom: 1px solid var(--coral);
+  border-bottom: 1px solid var(--green);
   transition: opacity 0.2s;
 }
 .legal-card a:hover { opacity: 0.65; }
@@ -730,10 +731,10 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .legal-block { margin-bottom: 26px; }
 .legal-block address { font-style: normal; line-height: 1.8; font-size: 14px; }
 
-/* Placeholder marker — clearly flags text Gabriel must verify/fill. */
+/* Placeholder marker — flags text to verify/fill. */
 .ph {
-  background: rgba(232, 95, 92, 0.12);
-  border-bottom: 1px dashed var(--coral);
+  background: var(--green-12);
+  border-bottom: 1px dashed var(--green);
   padding: 0 4px;
   border-radius: 3px;
 }
@@ -741,15 +742,15 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  background: rgba(232, 95, 92, 0.08);
-  border: 1px solid rgba(232, 95, 92, 0.3);
+  background: var(--green-08);
+  border: 1px solid var(--green-30);
   border-radius: 12px;
   padding: 14px 16px;
   margin-bottom: 30px;
   font-size: 12.5px;
   line-height: 1.65;
 }
-.note-box .material-symbols-outlined { font-size: 20px; color: var(--coral); flex-shrink: 0; margin-top: 1px; }
+.note-box .material-symbols-outlined { font-size: 20px; color: var(--green); flex-shrink: 0; margin-top: 1px; }
 
 /* Lizenzen list (mirrors in-app licenses screen) */
 .license-item { padding: 20px 0; border-top: 1px solid var(--ink-12); }
@@ -810,7 +811,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-art { order: -1; max-width: 460px; margin: 0 auto; width: 100%; }
+  .hero-art { order: -1; max-width: 520px; margin: 0 auto; width: 100%; }
   .hero { min-height: auto; padding-top: calc(var(--nav-h) + 56px); }
   .scroll-cue { display: none; }
 }
@@ -825,7 +826,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
     align-items: stretch;
     gap: 0;
     padding: 12px;
-    background: rgba(197, 211, 220, 0.96);
+    background: rgba(183, 201, 189, 0.97);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--ink-12);
     box-shadow: var(--shadow-md);
