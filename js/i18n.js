@@ -14,6 +14,10 @@
   const LANGS = ['de', 'en', 'es', 'fr', 'it', 'nl', 'pl'];
   const DEFAULT = 'de';
   const STORE_KEY = 'teide-web-lang';
+  // Cache-bust token — bump on every website change AND keep it in sync with the
+  // ?v= on the css/js <link>/<script> tags in the four HTML pages. Prevents a
+  // browser from pairing fresh HTML with a stale cached stylesheet/script/dict.
+  const ASSET_VER = '20260625';
   // 2-letter language codes shown as chips. NOT emoji flags — Windows Chrome/Edge
   // have no flag glyphs and would fall back to bare "DE"/"GB" letters.
   const CODES = { de: 'DE', en: 'EN', es: 'ES', fr: 'FR', it: 'IT', nl: 'NL', pl: 'PL' };
@@ -67,7 +71,7 @@
 
   function load(lang) {
     if (dicts[lang]) return Promise.resolve(dicts[lang]);
-    return fetch(new URL(lang + '.json', base))
+    return fetch(new URL(lang + '.json?v=' + ASSET_VER, base))
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))))
       .then((d) => (dicts[lang] = d));
   }
