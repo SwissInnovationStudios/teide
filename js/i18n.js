@@ -17,7 +17,7 @@
   // Cache-bust token — bump on every website change AND keep it in sync with the
   // ?v= on the css/js <link>/<script> tags in the four HTML pages. Prevents a
   // browser from pairing fresh HTML with a stale cached stylesheet/script/dict.
-  const ASSET_VER = '20260711';
+  const ASSET_VER = '20260717';
   // 2-letter language codes shown as chips. NOT emoji flags — Windows Chrome/Edge
   // have no flag glyphs and would fall back to bare "DE"/"GB" letters.
   const CODES = { de: 'DE', en: 'EN', es: 'ES', fr: 'FR', it: 'IT', nl: 'NL', pl: 'PL' };
