@@ -122,6 +122,7 @@
   "licenses.capacitor.summary": "Laufzeit-Bridge, die die Web-App als native iOS-/Android-App verpackt. · <a href=\"https://capacitorjs.com\" target=\"_blank\" rel=\"noopener\">capacitorjs.com</a>",
   "licenses.inconsolata.summary": "Die Schriftart der gesamten Oberfläche. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Die Icon-Schrift für HUD und Menüs (Pause, Karte, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
+  "licenses.audio.summary": "Soundeffekte von <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, genutzt unter der Pixabay Content License. Musik komponiert von Daniel Schultes.",
   "licenses.show": "Lizenztext anzeigen",
   "licenses.fallback": "Lizenztext wird beim Aufklappen geladen — oder direkt öffnen:",
 

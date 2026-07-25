@@ -122,6 +122,7 @@
   "licenses.capacitor.summary": "Mostek czasu wykonania pakujący aplikację webową jako natywną aplikację iOS/Android. · <a href=\"https://capacitorjs.com\" target=\"_blank\" rel=\"noopener\">capacitorjs.com</a>",
   "licenses.inconsolata.summary": "Czcionka całego interfejsu. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Czcionka ikon dla HUD i menu (pauza, mapa, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
+  "licenses.audio.summary": "Efekty dźwiękowe z <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, na licencji Pixabay Content License. Muzykę skomponował Daniel Schultes.",
   "licenses.show": "Pokaż tekst licencji",
   "licenses.fallback": "Tekst licencji zostanie wczytany po rozwinięciu — lub otwórz bezpośrednio:",
 

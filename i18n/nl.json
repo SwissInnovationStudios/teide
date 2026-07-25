@@ -122,6 +122,7 @@
   "licenses.capacitor.summary": "Runtime-bridge die de web-app als native iOS-/Android-app verpakt. · <a href=\"https://capacitorjs.com\" target=\"_blank\" rel=\"noopener\">capacitorjs.com</a>",
   "licenses.inconsolata.summary": "Het lettertype van de gehele interface. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Het icoonlettertype voor HUD en menu's (pauze, kaart, booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
+  "licenses.audio.summary": "Geluidseffecten van <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, gebruikt onder de Pixabay Content-licentie. Muziek gecomponeerd door Daniel Schultes.",
   "licenses.show": "Licentietekst tonen",
   "licenses.fallback": "Licentietekst wordt bij het uitklappen geladen — of direct openen:",
 
