@@ -123,6 +123,8 @@
   "licenses.inconsolata.summary": "Il carattere tipografico dell'intera interfaccia. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Il carattere delle icone per HUD e menu (pausa, mappa, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Effetti sonori da <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, usati con la Licenza dei Contenuti Pixabay. Musica composta da Daniel Schultes.",
+  "licenses.ai.title": "Trasparenza sull'IA",
+  "licenses.ai.summary": "Parte della grafica (ad es. immagini per gli store e per il sito web) e le traduzioni dell'app e del sito web sono state realizzate con il supporto dell'IA generativa e sottoposte a revisione redazionale. L'app stessa non contiene sistemi di IA.",
   "licenses.show": "Mostra il testo della licenza",
   "licenses.fallback": "Il testo della licenza viene caricato all'espansione — oppure aprilo direttamente:",
 

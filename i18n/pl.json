@@ -123,6 +123,8 @@
   "licenses.inconsolata.summary": "Czcionka całego interfejsu. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Czcionka ikon dla HUD i menu (pauza, mapa, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Efekty dźwiękowe z <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, na licencji Pixabay Content License. Muzykę skomponował Daniel Schultes.",
+  "licenses.ai.title": "Przejrzystość dotycząca AI",
+  "licenses.ai.summary": "Część grafik (np. grafiki do sklepów i na stronę internetową) oraz tłumaczenia aplikacji i strony powstały z pomocą generatywnej AI i zostały poddane redakcji. Sama aplikacja nie zawiera systemów AI.",
   "licenses.show": "Pokaż tekst licencji",
   "licenses.fallback": "Tekst licencji zostanie wczytany po rozwinięciu — lub otwórz bezpośrednio:",
 

@@ -123,6 +123,8 @@
   "licenses.inconsolata.summary": "The typeface used across the entire interface. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "The icon font for HUD and menus (pause, map, booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Sound effects from <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, used under the Pixabay Content Licence. Music composed by Daniel Schultes.",
+  "licenses.ai.title": "AI transparency",
+  "licenses.ai.summary": "Parts of the artwork (e.g. store and website graphics) and the translations of the app and website were created with the assistance of generative AI and editorially reviewed. The app itself contains no AI systems.",
   "licenses.show": "Show licence text",
   "licenses.fallback": "The licence text is loaded when expanded — or open it directly:",
 

@@ -123,6 +123,8 @@
   "licenses.inconsolata.summary": "La police de caractères de toute l'interface. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "La police d'icônes du HUD et des menus (pause, carte, booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Effets sonores de <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, utilisés sous la licence de contenu Pixabay. Musique composée par Daniel Schultes.",
+  "licenses.ai.title": "Transparence sur l'IA",
+  "licenses.ai.summary": "Une partie des visuels (p. ex. graphismes pour les stores et le site web) ainsi que les traductions de l'application et du site web ont été réalisées avec l'aide d'une IA générative, puis relues et validées. L'application elle-même ne contient aucun système d'IA.",
   "licenses.show": "Afficher le texte de la licence",
   "licenses.fallback": "Le texte de la licence se charge lors du dépliage — ou ouvre-le directement :",
 
