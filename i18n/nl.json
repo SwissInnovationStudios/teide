@@ -1,19 +1,16 @@
 {
   "meta.index.desc": "Teide: Glide the Canaries — minimalistisch papieren-vliegtuig-zweefspel boven de echte Canarische Eilanden. Berijd de thermiek, ontdek Points of Interest en land op echte landingsbanen.",
   "meta.og.desc": "Minimalistisch papieren-vliegtuig-zweefspel boven de Canarische Eilanden.",
-
   "aria.brandHome": "Teide — Startpagina",
   "aria.mainNav": "Hoofdnavigatie",
   "aria.langSelect": "Taal kiezen",
   "aria.menu": "Menu",
   "aria.next": "Verder",
-
   "nav.features": "Features",
   "nav.islands": "Eilanden",
   "nav.screenshots": "Screenshots",
   "nav.download": "Download",
   "nav.play": "Spelen",
-
   "hero.title": "Zweef over de<br><span class=\"tint\">Canarische Eilanden</span>",
   "hero.lead": "Een zelfgevouwen papieren vliegtuig, echt terrein uit hoogtegegevens en niets dan thermiek onder de vleugels. Start vanaf de Teide, berijd de opwinden en zie hoe ver je kunt zweven — van La Gomera tot Lanzarote.",
   "cta.playBrowser": "In de browser spelen",
@@ -26,15 +23,12 @@
   "hero.metaIslands": "7 eilanden",
   "hero.sceneAlt": "Low-Poly-archipel van de Canarische Eilanden met de vulkaan Teide",
   "hero.scroll": "Scroll",
-
   "pitch.eyebrow": "Waar het om gaat",
   "pitch.quote": "Je hebt het perfecte papieren vliegtuig gevouwen en het vanaf de hellingen van de <span class=\"tint\">Teide</span> gestart. Nu telt maar één ding: <span class=\"tint\">in de lucht blijven.</span>",
   "pitch.sub": "Vang opwinden, vlieg door Points of Interest om plekken te verzamelen, en land op echte landingsbanen om ze als nieuwe startpunten te ontgrendelen. Geef je punten uit in de hangar en verbeter vliegtuig en booster — zweef je ver genoeg, dan komen nieuwe eilanden binnen bereik.",
-
   "features.eyebrow": "Features",
   "features.title": "Een spel zo rustig als een zweefvlucht",
   "features.sub": "Geen stress, geen timer — alleen jij, de wind en een archipel van echte hoogtegegevens. Minimalistisch in uiterlijk, verrassend diep in detail.",
-
   "feature.terrain.title": "Echt terrein",
   "feature.terrain.body": "De eilanden komen uit echte SRTM-hoogtegegevens — van de 3.715 m hoge Teide tot de duinen in het oosten.",
   "feature.thermals.title": "Thermiek & opwinden",
@@ -51,11 +45,9 @@
   "feature.look.body": "Rustige Low-Poly-stijl in papier & inkt. Een helder HUD dat nooit in de weg zit.",
   "feature.offline.title": "Offline & eerlijk",
   "feature.offline.body": "Draait volledig offline. Geen account, geen reclame, geen tracking — je voortgang blijft op het apparaat.",
-
   "islands.eyebrow": "De archipel",
   "islands.title": "Zeven eilanden, één horizon",
   "islands.sub": "Elk eiland is een eigen doel. Hoe sterker je booster, hoe verder je zweefvlucht reikt — van de westelijke eilanden tot de vulkaanvelden in het oosten.",
-
   "island.elhierro.rank": "01 · West",
   "island.elhierro.tag": "Westkoers",
   "island.elhierro.desc": "De meest westelijke voorpost — het verste punt van je reis.",
@@ -77,16 +69,13 @@
   "island.lanzarote.rank": "06 · Oost",
   "island.lanzarote.tag": "Verre bestemming",
   "island.lanzarote.desc": "Zwarte vulkaanvelden aan de oostelijke horizon — het einde van de wereld.",
-
   "screenshots.eyebrow": "Screenshots",
   "screenshots.title": "Zie het zelf",
   "screenshots.sub": "Er wordt in liggend formaat gespeeld — voor het volledige zicht op de horizon.",
   "screenshots.alt1": "Teide-gameplay: nadering van de kust van Tenerife met HUD",
   "screenshots.alt2": "Teide: zweefvlucht door een kloof, op de achtergrond de Teide-rots",
-
   "cta.title": "Klaar om op te stijgen?",
   "cta.body": "Vouw je vliegtuig, start vanaf de Teide en ontdek hoe ver je kunt zweven. Nu speelbaar in de browser en op Google Play — iOS volgt.",
-
   "footer.tagline": "Minimalistisch papieren-vliegtuig-zweefspel boven de Canarische Eilanden. Gebouwd met Three.js.",
   "footer.colSite": "Site",
   "footer.colLegal": "Juridisch",
@@ -94,9 +83,7 @@
   "footer.imprint": "Colofon",
   "footer.privacy": "Privacy",
   "footer.licenses": "Opensource-licenties",
-
   "legal.eyebrow": "Juridisch",
-
   "meta.imprint.title": "Colofon — Teide",
   "meta.imprint.desc": "Colofon van de website en app Teide: Glide the Canaries.",
   "imprint.h1": "Colofon",
@@ -113,7 +100,6 @@
   "imprint.liabilityLinksBody": "Ons aanbod bevat links naar externe websites van derden, op de inhoud waarvan wij geen invloed hebben. Daarom kunnen wij voor deze externe inhoud ook geen garantie geven. Voor de inhoud van de gelinkte pagina's is steeds de betreffende aanbieder of beheerder van de pagina's verantwoordelijk.",
   "imprint.copyrightH": "Auteursrecht",
   "imprint.copyrightBody": "De door de aanbieder gemaakte inhoud en werken op deze pagina's — teksten, afbeeldingen, het spel zelf en de broncode ervan — vallen onder het auteursrecht. Geïntegreerde opensource-componenten vallen onder hun respectieve licenties; de volledige licentieteksten vind je onder <a href=\"lizenzen.html\">Opensource-licenties</a>.",
-
   "meta.licenses.title": "Opensource-licenties — Teide",
   "meta.licenses.desc": "Opensource-componenten en licenties van de app Teide: Glide the Canaries.",
   "licenses.h1": "Opensource-licenties",
@@ -123,11 +109,11 @@
   "licenses.inconsolata.summary": "Het lettertype van de gehele interface. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Het icoonlettertype voor HUD en menu's (pauze, kaart, booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Geluidseffecten van <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, gebruikt onder de Pixabay Content-licentie. Muziek gecomponeerd door Daniel Schultes.",
+  "licenses.icons.summary": "Het “Gouden Vleugels”-icoon (“Feather Wing”) komt van <a href=\"https://www.svgrepo.com/svg/499156/feather-wing\" target=\"_blank\" rel=\"noopener\">SVG Repo</a> en is vrij voor commercieel gebruik.",
   "licenses.ai.title": "AI-transparantie",
   "licenses.ai.summary": "Een deel van het artwork (bijv. store- en websitegraphics) en de vertalingen van de app en de website zijn gemaakt met behulp van generatieve AI en redactioneel gecontroleerd. De app zelf bevat geen AI-systemen.",
   "licenses.show": "Licentietekst tonen",
   "licenses.fallback": "Licentietekst wordt bij het uitklappen geladen — of direct openen:",
-
   "meta.privacy.title": "Privacyverklaring — Teide",
   "meta.privacy.desc": "Privacyverklaring voor de website en de app Teide: Glide the Canaries.",
   "privacy.h1": "Privacyverklaring",

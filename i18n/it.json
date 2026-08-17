@@ -1,19 +1,16 @@
 {
   "meta.index.desc": "Teide: Glide the Canaries — un minimalista gioco di volo planato con aeroplanini di carta sopra le vere Isole Canarie. Cavalca le termiche, scopri i Points of Interest e atterra su piste reali.",
   "meta.og.desc": "Minimalista gioco di volo planato con aeroplanini di carta sopra le Isole Canarie.",
-
   "aria.brandHome": "Teide — Pagina iniziale",
   "aria.mainNav": "Navigazione principale",
   "aria.langSelect": "Scegli la lingua",
   "aria.menu": "Menu",
   "aria.next": "Avanti",
-
   "nav.features": "Funzioni",
   "nav.islands": "Isole",
   "nav.screenshots": "Screenshot",
   "nav.download": "Download",
   "nav.play": "Gioca",
-
   "hero.title": "Plana sopra le<br><span class=\"tint\">Isole Canarie</span>",
   "hero.lead": "Un aeroplanino di carta piegato a mano, terreno reale ricavato da dati altimetrici e nient'altro che termiche sotto le ali. Decolla dal Teide, cavalca le correnti ascensionali e scopri fin dove riesci a planare — da La Gomera fino a Lanzarote.",
   "cta.playBrowser": "Gioca nel browser",
@@ -26,15 +23,12 @@
   "hero.metaIslands": "7 isole",
   "hero.sceneAlt": "Arcipelago Low-Poly delle Isole Canarie con il vulcano Teide",
   "hero.scroll": "Scorri",
-
   "pitch.eyebrow": "Di cosa si tratta",
   "pitch.quote": "Hai piegato l'aeroplanino di carta perfetto e l'hai lanciato dai pendii del <span class=\"tint\">Teide</span>. Ora conta una cosa sola: <span class=\"tint\">restare in alto.</span>",
   "pitch.sub": "Cattura le correnti ascensionali, vola attraverso i Points of Interest per raccogliere luoghi e atterra su piste reali per sbloccarle come nuovi punti di partenza. Spendi i tuoi punti nell'Hangar e migliora aeroplano e Booster — se plani abbastanza lontano, nuove isole entrano nel raggio d'azione.",
-
   "features.eyebrow": "Funzioni",
   "features.title": "Un gioco calmo come una planata",
   "features.sub": "Niente stress, niente timer — solo tu, il vento e un arcipelago ricavato da veri dati altimetrici. Minimalista nell'aspetto, sorprendentemente profondo nei dettagli.",
-
   "feature.terrain.title": "Terreno reale",
   "feature.terrain.body": "Le isole provengono da veri dati altimetrici SRTM — dal Teide alto 3.715 m fino alle dune a est.",
   "feature.thermals.title": "Termiche & correnti ascensionali",
@@ -51,11 +45,9 @@
   "feature.look.body": "Calma estetica Low-Poly in carta & inchiostro. Un HUD pulito che non è mai d'intralcio.",
   "feature.offline.title": "Offline & corretto",
   "feature.offline.body": "Funziona completamente offline. Nessun account, nessuna pubblicità, nessun tracciamento — i tuoi progressi restano sul dispositivo.",
-
   "islands.eyebrow": "L'arcipelago",
   "islands.title": "Sette isole, un orizzonte",
   "islands.sub": "Ogni isola è una meta a sé. Più forte è il tuo Booster, più lontano arriva la tua planata — dalle isole occidentali fino ai campi vulcanici a est.",
-
   "island.elhierro.rank": "01 · Ovest",
   "island.elhierro.tag": "Rotta a ovest",
   "island.elhierro.desc": "L'avamposto più occidentale — il punto più lontano del tuo viaggio.",
@@ -77,16 +69,13 @@
   "island.lanzarote.rank": "06 · Est",
   "island.lanzarote.tag": "Meta lontana",
   "island.lanzarote.desc": "Neri campi vulcanici all'orizzonte orientale — la fine del mondo.",
-
   "screenshots.eyebrow": "Screenshot",
   "screenshots.title": "Guarda con i tuoi occhi",
   "screenshots.sub": "Si gioca in formato orizzontale — per la vista completa sull'orizzonte.",
   "screenshots.alt1": "Gameplay di Teide: avvicinamento alla costa di Tenerife con HUD",
   "screenshots.alt2": "Teide: planata attraverso una gola, sullo sfondo la roccia del Teide",
-
   "cta.title": "Pronto a decollare?",
   "cta.body": "Piega il tuo aeroplanino, decolla dal Teide e scopri fin dove riesci a planare. Ora giocabile nel browser e su Google Play — iOS in arrivo.",
-
   "footer.tagline": "Minimalista gioco di volo planato con aeroplanini di carta sopra le Isole Canarie. Realizzato con Three.js.",
   "footer.colSite": "Sito",
   "footer.colLegal": "Note legali",
@@ -94,9 +83,7 @@
   "footer.imprint": "Note legali",
   "footer.privacy": "Privacy",
   "footer.licenses": "Licenze open source",
-
   "legal.eyebrow": "Note legali",
-
   "meta.imprint.title": "Note legali — Teide",
   "meta.imprint.desc": "Note legali del sito web e dell'app Teide: Glide the Canaries.",
   "imprint.h1": "Note legali",
@@ -113,7 +100,6 @@
   "imprint.liabilityLinksBody": "La nostra offerta contiene collegamenti a siti web esterni di terzi, sui cui contenuti non abbiamo alcuna influenza. Per questo motivo non possiamo assumerci alcuna garanzia per tali contenuti esterni. Della correttezza dei contenuti delle pagine collegate è sempre responsabile il rispettivo fornitore o gestore delle pagine.",
   "imprint.copyrightH": "Diritto d'autore",
   "imprint.copyrightBody": "I contenuti e le opere realizzati dal fornitore su queste pagine — testi, grafiche, il gioco stesso e il suo codice sorgente — sono soggetti al diritto d'autore. I componenti open source integrati sono soggetti alle rispettive licenze; i testi completi delle licenze sono disponibili nelle <a href=\"lizenzen.html\">Licenze open source</a>.",
-
   "meta.licenses.title": "Licenze open source — Teide",
   "meta.licenses.desc": "Componenti open source e licenze dell'app Teide: Glide the Canaries.",
   "licenses.h1": "Licenze open source",
@@ -123,11 +109,11 @@
   "licenses.inconsolata.summary": "Il carattere tipografico dell'intera interfaccia. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Il carattere delle icone per HUD e menu (pausa, mappa, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Effetti sonori da <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, usati con la Licenza dei Contenuti Pixabay. Musica composta da Daniel Schultes.",
+  "licenses.icons.summary": "L’icona “Ali Dorate” (“Feather Wing”) proviene da <a href=\"https://www.svgrepo.com/svg/499156/feather-wing\" target=\"_blank\" rel=\"noopener\">SVG Repo</a> ed è libera per uso commerciale.",
   "licenses.ai.title": "Trasparenza sull'IA",
   "licenses.ai.summary": "Parte della grafica (ad es. immagini per gli store e per il sito web) e le traduzioni dell'app e del sito web sono state realizzate con il supporto dell'IA generativa e sottoposte a revisione redazionale. L'app stessa non contiene sistemi di IA.",
   "licenses.show": "Mostra il testo della licenza",
   "licenses.fallback": "Il testo della licenza viene caricato all'espansione — oppure aprilo direttamente:",
-
   "meta.privacy.title": "Informativa sulla privacy — Teide",
   "meta.privacy.desc": "Informativa sulla privacy per il sito web e l'app Teide: Glide the Canaries.",
   "privacy.h1": "Informativa sulla privacy",

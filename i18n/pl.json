@@ -1,19 +1,16 @@
 {
   "meta.index.desc": "Teide: Glide the Canaries — minimalistyczna gra o szybowaniu papierowym samolocikiem nad prawdziwymi Wyspami Kanaryjskimi. Ujarzmiaj termikę, odkrywaj Points of Interest i ląduj na prawdziwych pasach startowych.",
   "meta.og.desc": "Minimalistyczna gra o szybowaniu papierowym samolocikiem nad Wyspami Kanaryjskimi.",
-
   "aria.brandHome": "Teide — strona główna",
   "aria.mainNav": "Nawigacja główna",
   "aria.langSelect": "Wybierz język",
   "aria.menu": "Menu",
   "aria.next": "Dalej",
-
   "nav.features": "Funkcje",
   "nav.islands": "Wyspy",
   "nav.screenshots": "Zrzuty ekranu",
   "nav.download": "Pobierz",
   "nav.play": "Graj",
-
   "hero.title": "Szybuj nad<br><span class=\"tint\">Wyspami Kanaryjskimi</span>",
   "hero.lead": "Samodzielnie złożony papierowy samolocik, prawdziwy teren z danych wysokościowych i nic poza termiką pod skrzydłami. Wystartuj z Teide, ujarzmiaj prądy wznoszące i sprawdź, jak daleko zdołasz poszybować — od La Gomera po Lanzarote.",
   "cta.playBrowser": "Graj w przeglądarce",
@@ -26,15 +23,12 @@
   "hero.metaIslands": "7 wysp",
   "hero.sceneAlt": "Low-Poly archipelag Wysp Kanaryjskich z wulkanem Teide",
   "hero.scroll": "Przewiń",
-
   "pitch.eyebrow": "O co chodzi",
   "pitch.quote": "Złożyłeś idealny papierowy samolocik i wystartowałeś nim ze zboczy <span class=\"tint\">Teide</span>. Teraz liczy się tylko jedno: <span class=\"tint\">utrzymać się w górze.</span>",
   "pitch.sub": "Łap prądy wznoszące, przelatuj przez Points of Interest, by zbierać Miejsca, i ląduj na prawdziwych pasach startowych, by odblokować je jako nowe punkty startu. Wydawaj punkty w Hangarze i ulepszaj samolot oraz Booster — gdy poszybujesz wystarczająco daleko, w zasięgu pojawią się nowe wyspy.",
-
   "features.eyebrow": "Funkcje",
   "features.title": "Gra spokojna jak lot szybowcowy",
   "features.sub": "Bez stresu, bez minutnika — tylko ty, wiatr i archipelag z prawdziwych danych wysokościowych. Minimalistyczny w wyglądzie, zaskakująco bogaty w szczegółach.",
-
   "feature.terrain.title": "Prawdziwy teren",
   "feature.terrain.body": "Wyspy powstały z prawdziwych danych wysokościowych SRTM — od liczącego 3715 m Teide po wydmy na wschodzie.",
   "feature.thermals.title": "Termika i prądy wznoszące",
@@ -51,11 +45,9 @@
   "feature.look.body": "Spokojna estetyka Low-Poly w papierze i atramencie. Czytelny HUD, który nigdy nie przeszkadza.",
   "feature.offline.title": "Offline i uczciwie",
   "feature.offline.body": "Działa w pełni offline. Bez konta, bez reklam, bez śledzenia — twój stan gry pozostaje na urządzeniu.",
-
   "islands.eyebrow": "Archipelag",
   "islands.title": "Siedem wysp, jeden horyzont",
   "islands.sub": "Każda wyspa to osobny cel. Im silniejszy twój Booster, tym dalej sięga twój lot szybowcowy — od wysp na zachodzie po pola wulkaniczne na wschodzie.",
-
   "island.elhierro.rank": "01 · Zachód",
   "island.elhierro.tag": "Kurs na zachód",
   "island.elhierro.desc": "Najdalej na zachód wysunięta placówka — najdalszy punkt twojej podróży.",
@@ -77,16 +69,13 @@
   "island.lanzarote.rank": "06 · Wschód",
   "island.lanzarote.tag": "Odległy cel",
   "island.lanzarote.desc": "Czarne pola wulkaniczne na wschodnim horyzoncie — koniec świata.",
-
   "screenshots.eyebrow": "Zrzuty ekranu",
   "screenshots.title": "Zobacz sam",
   "screenshots.sub": "Gra się w orientacji poziomej — dla pełnego widoku na horyzont.",
   "screenshots.alt1": "Rozgrywka Teide: podejście do wybrzeża Tenerife z HUD",
   "screenshots.alt2": "Teide: lot szybowcowy przez wąwóz, w tle skała Teide",
-
   "cta.title": "Gotowy do startu?",
   "cta.body": "Złóż swój samolocik, wystartuj z Teide i przekonaj się, jak daleko zdołasz poszybować. Już teraz grywalne w przeglądarce i w Google Play — iOS wkrótce.",
-
   "footer.tagline": "Minimalistyczna gra o szybowaniu papierowym samolocikiem nad Wyspami Kanaryjskimi. Zbudowana w Three.js.",
   "footer.colSite": "Strona",
   "footer.colLegal": "Informacje prawne",
@@ -94,9 +83,7 @@
   "footer.imprint": "Nota prawna",
   "footer.privacy": "Ochrona danych",
   "footer.licenses": "Licencje open source",
-
   "legal.eyebrow": "Informacje prawne",
-
   "meta.imprint.title": "Nota prawna — Teide",
   "meta.imprint.desc": "Nota prawna witryny i aplikacji Teide: Glide the Canaries.",
   "imprint.h1": "Nota prawna",
@@ -113,7 +100,6 @@
   "imprint.liabilityLinksBody": "Nasza oferta zawiera odnośniki do zewnętrznych witryn osób trzecich, na których treść nie mamy wpływu. Dlatego nie możemy również udzielić gwarancji za te obce treści. Za treści stron, do których prowadzą odnośniki, odpowiada zawsze ich odpowiedni dostawca lub operator.",
   "imprint.copyrightH": "Prawo autorskie",
   "imprint.copyrightBody": "Stworzone przez usługodawcę treści i utwory na tych stronach — teksty, grafiki, sama gra i jej kod źródłowy — podlegają prawu autorskiemu. Wbudowane komponenty open source podlegają swoim odpowiednim licencjom; pełne teksty licencji znajdziesz pod adresem <a href=\"lizenzen.html\">Licencje open source</a>.",
-
   "meta.licenses.title": "Licencje open source — Teide",
   "meta.licenses.desc": "Komponenty open source i licencje aplikacji Teide: Glide the Canaries.",
   "licenses.h1": "Licencje open source",
@@ -123,11 +109,11 @@
   "licenses.inconsolata.summary": "Czcionka całego interfejsu. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Czcionka ikon dla HUD i menu (pauza, mapa, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Efekty dźwiękowe z <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, na licencji Pixabay Content License. Muzykę skomponował Daniel Schultes.",
+  "licenses.icons.summary": "Ikona „Złote Skrzydła” („Feather Wing”) pochodzi z <a href=\"https://www.svgrepo.com/svg/499156/feather-wing\" target=\"_blank\" rel=\"noopener\">SVG Repo</a> i jest dostępna do bezpłatnego użytku komercyjnego.",
   "licenses.ai.title": "Przejrzystość dotycząca AI",
   "licenses.ai.summary": "Część grafik (np. grafiki do sklepów i na stronę internetową) oraz tłumaczenia aplikacji i strony powstały z pomocą generatywnej AI i zostały poddane redakcji. Sama aplikacja nie zawiera systemów AI.",
   "licenses.show": "Pokaż tekst licencji",
   "licenses.fallback": "Tekst licencji zostanie wczytany po rozwinięciu — lub otwórz bezpośrednio:",
-
   "meta.privacy.title": "Polityka prywatności — Teide",
   "meta.privacy.desc": "Polityka prywatności witryny i aplikacji Teide: Glide the Canaries.",
   "privacy.h1": "Polityka prywatności",

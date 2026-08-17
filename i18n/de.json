@@ -1,19 +1,16 @@
 {
   "meta.index.desc": "Teide: Glide the Canaries — minimalistisches Papierflieger-Gleitspiel über den echten Kanarischen Inseln. Reite die Thermik, entdecke Points of Interest und lande auf echten Pisten.",
   "meta.og.desc": "Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln.",
-
   "aria.brandHome": "Teide — Startseite",
   "aria.mainNav": "Hauptnavigation",
   "aria.langSelect": "Sprache wählen",
   "aria.menu": "Menü",
   "aria.next": "Weiter",
-
   "nav.features": "Features",
   "nav.islands": "Inseln",
   "nav.screenshots": "Screenshots",
   "nav.download": "Download",
   "nav.play": "Spielen",
-
   "hero.title": "Gleite über die<br><span class=\"tint\">Kanarischen Inseln</span>",
   "hero.lead": "Ein selbstgefalteter Papierflieger, echtes Gelände aus Höhendaten und nichts als Thermik unter den Flügeln. Starte vom Teide, reite die Aufwinde und sieh, wie weit du gleiten kannst — von La Gomera bis Lanzarote.",
   "cta.playBrowser": "Im Browser spielen",
@@ -26,15 +23,12 @@
   "hero.metaIslands": "7 Inseln",
   "hero.sceneAlt": "Low-Poly-Archipel der Kanarischen Inseln mit dem Teide-Vulkan",
   "hero.scroll": "Scroll",
-
   "pitch.eyebrow": "Worum geht's",
   "pitch.quote": "Du hast den perfekten Papierflieger gefaltet und ihn von den Hängen des <span class=\"tint\">Teide</span> gestartet. Jetzt zählt nur eins: <span class=\"tint\">oben bleiben.</span>",
   "pitch.sub": "Fang Aufwinde ein, flieg durch Points of Interest, um Orte zu sammeln, und lande auf echten Pisten, um sie als neue Startpunkte freizuschalten. Gib deine Punkte im Hangar aus und verbessere Flugzeug und Booster — gleitest du weit genug, kommen neue Inseln in Reichweite.",
-
   "features.eyebrow": "Features",
   "features.title": "Ein Spiel, so ruhig wie ein Gleitflug",
   "features.sub": "Kein Stress, kein Timer — nur du, der Wind und ein Archipel aus echten Höhendaten. Minimalistisch im Look, überraschend tief im Detail.",
-
   "feature.terrain.title": "Echtes Gelände",
   "feature.terrain.body": "Die Inseln stammen aus echten SRTM-Höhendaten — vom 3.715 m hohen Teide bis zu den Dünen im Osten.",
   "feature.thermals.title": "Thermik & Aufwinde",
@@ -51,11 +45,9 @@
   "feature.look.body": "Ruhige Low-Poly-Optik in Papier & Tinte. Eine klare HUD, die nie im Weg steht.",
   "feature.offline.title": "Offline & fair",
   "feature.offline.body": "Läuft komplett offline. Kein Account, keine Werbung, kein Tracking — dein Spielstand bleibt auf dem Gerät.",
-
   "islands.eyebrow": "Das Archipel",
   "islands.title": "Sieben Inseln, ein Horizont",
   "islands.sub": "Jede Insel ist ein eigenes Ziel. Je stärker dein Booster, desto weiter reicht dein Gleitflug — von den Westinseln bis zu den Vulkanfeldern im Osten.",
-
   "island.elhierro.rank": "01 · West",
   "island.elhierro.tag": "Westkurs",
   "island.elhierro.desc": "Der westlichste Vorposten — der weiteste Punkt deiner Reise.",
@@ -77,16 +69,13 @@
   "island.lanzarote.rank": "06 · Ost",
   "island.lanzarote.tag": "Fernziel",
   "island.lanzarote.desc": "Schwarze Vulkanfelder am östlichen Horizont — das Ende der Welt.",
-
   "screenshots.eyebrow": "Screenshots",
   "screenshots.title": "Sieh es selbst",
   "screenshots.sub": "Gespielt wird im Querformat — für den vollen Blick auf den Horizont.",
   "screenshots.alt1": "Teide-Gameplay: Anflug auf die Küste von Tenerife mit HUD",
   "screenshots.alt2": "Teide: Gleitflug durch eine Schlucht, im Hintergrund der Teide-Fels",
-
   "cta.title": "Bereit zum Abheben?",
   "cta.body": "Falte deinen Flieger, starte vom Teide und finde heraus, wie weit du gleiten kannst. Jetzt im Browser und bei Google Play spielbar — iOS folgt.",
-
   "footer.tagline": "Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln. Gebaut mit Three.js.",
   "footer.colSite": "Seite",
   "footer.colLegal": "Rechtliches",
@@ -94,9 +83,7 @@
   "footer.imprint": "Impressum",
   "footer.privacy": "Datenschutz",
   "footer.licenses": "Open-Source-Lizenzen",
-
   "legal.eyebrow": "Rechtliches",
-
   "meta.imprint.title": "Impressum — Teide",
   "meta.imprint.desc": "Impressum der Website und App Teide: Glide the Canaries.",
   "imprint.h1": "Impressum",
@@ -113,7 +100,6 @@
   "imprint.liabilityLinksBody": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
   "imprint.copyrightH": "Urheberrecht",
   "imprint.copyrightBody": "Die durch den Anbieter erstellten Inhalte und Werke auf diesen Seiten — Texte, Grafiken, das Spiel selbst und sein Quellcode — unterliegen dem Urheberrecht. Eingebundene Open-Source-Komponenten unterliegen ihren jeweiligen Lizenzen; die vollständigen Lizenztexte findest du unter <a href=\"lizenzen.html\">Open-Source-Lizenzen</a>.",
-
   "meta.licenses.title": "Open-Source-Lizenzen — Teide",
   "meta.licenses.desc": "Open-Source-Komponenten und Lizenzen der App Teide: Glide the Canaries.",
   "licenses.h1": "Open-Source-Lizenzen",
@@ -123,11 +109,11 @@
   "licenses.inconsolata.summary": "Die Schriftart der gesamten Oberfläche. · <a href=\"https://fonts.google.com/specimen/Inconsolata\" target=\"_blank\" rel=\"noopener\">fonts.google.com</a>",
   "licenses.materialsymbols.summary": "Die Icon-Schrift für HUD und Menüs (Pause, Karte, Booster …). · <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener\">fonts.google.com/icons</a>",
   "licenses.audio.summary": "Soundeffekte von <a href=\"https://pixabay.com\" target=\"_blank\" rel=\"noopener\">Pixabay</a>, genutzt unter der Pixabay Content License. Musik komponiert von Daniel Schultes.",
+  "licenses.icons.summary": "Das „Goldene Flügel“-Icon („Feather Wing“) stammt von <a href=\"https://www.svgrepo.com/svg/499156/feather-wing\" target=\"_blank\" rel=\"noopener\">SVG Repo</a> und ist frei kommerziell nutzbar.",
   "licenses.ai.title": "KI-Transparenz",
   "licenses.ai.summary": "Teile des Artworks (z. B. Store- und Website-Grafiken) sowie die Übersetzungen von App und Website wurden mit Unterstützung generativer KI erstellt und redaktionell geprüft. Die App selbst enthält keine KI-Systeme.",
   "licenses.show": "Lizenztext anzeigen",
   "licenses.fallback": "Lizenztext wird beim Aufklappen geladen — oder direkt öffnen:",
-
   "meta.privacy.title": "Datenschutzerklärung — Teide",
   "meta.privacy.desc": "Datenschutzerklärung für die Website und die App Teide: Glide the Canaries.",
   "privacy.h1": "Datenschutzerklärung",
