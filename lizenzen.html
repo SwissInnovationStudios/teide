@@ -6,25 +6,33 @@
 <title data-i18n="meta.licenses.title">Open-Source-Lizenzen — Teide</title>
 <meta name="description" data-i18n-attr="content:meta.licenses.desc" content="Open-Source-Komponenten und Lizenzen der App Teide: Glide the Canaries.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://swissinnovationstudios.github.io/teide/lizenzen.html">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-attr="content:meta.licenses.title" content="Open-Source-Lizenzen — Teide">
+<meta property="og:description" data-i18n-attr="content:meta.licenses.desc" content="Open-Source-Komponenten und Lizenzen der App Teide: Glide the Canaries.">
+<meta property="og:image" content="https://swissinnovationstudios.github.io/teide/assets/og-image.jpg">
+<meta property="og:url" content="https://swissinnovationstudios.github.io/teide/lizenzen.html">
+<meta property="og:locale" content="de_CH">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="css/styles.css?v=20261001">
+<link rel="stylesheet" href="css/styles.css?v=20261028">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-      <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+      <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
       <span class="brand-text">
         <span class="brand-name">Teide</span>
         <span class="brand-sub">Glide the Canaries</span>
       </span>
     </a>
     <div class="nav-end">
-      <nav class="nav-links" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
+      <nav class="nav-links" id="primary-nav" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
@@ -32,13 +40,19 @@
         <a class="btn btn-coral nav-cta" href="https://swissinnovationstudios.github.io/teide-game/" data-i18n="nav.play">Spielen</a>
       </nav>
       <div class="lang-select" data-lang-select>
-        <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-attr="aria-label:aria.langSelect" aria-label="Sprache wählen">
-          <span class="lang-chip" data-lang-current-code>DE</span>
-          <span class="material-symbols-outlined lang-caret">expand_more</span>
-        </button>
-        <ul class="lang-menu" role="listbox" hidden></ul>
+        <label class="visually-hidden" for="lang-select" data-i18n="aria.langSelect">Sprache wählen</label>
+        <select id="lang-select" class="lang-btn">
+          <option value="de">DE · Deutsch</option>
+          <option value="en">EN · English</option>
+          <option value="es">ES · Español</option>
+          <option value="fr">FR · Français</option>
+          <option value="it">IT · Italiano</option>
+          <option value="nl">NL · Nederlands</option>
+          <option value="pl">PL · Polski</option>
+        </select>
+        <span class="material-symbols-outlined lang-caret" aria-hidden="true">expand_more</span>
       </div>
-      <button class="nav-toggle" type="button" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -64,7 +78,7 @@
           <span class="license-name">three.js</span>
           <span class="license-tag">MIT License</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.three.summary">
+        <p class="license-summary" data-i18n-html="licenses.three.summary">
           3D-Engine, die Gelände, Flugzeug und Welt rendert. ·
           <a href="https://threejs.org" target="_blank" rel="noopener">threejs.org</a>
         </p>
@@ -79,7 +93,7 @@
           <span class="license-name">Capacitor</span>
           <span class="license-tag">MIT License</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.capacitor.summary">
+        <p class="license-summary" data-i18n-html="licenses.capacitor.summary">
           Laufzeit-Bridge, die die Web-App als native iOS-/Android-App verpackt. ·
           <a href="https://capacitorjs.com" target="_blank" rel="noopener">capacitorjs.com</a>
         </p>
@@ -91,10 +105,40 @@
 
       <article class="license-item">
         <div class="license-head">
+          <span class="license-name">Capacitor Community AdMob</span>
+          <span class="license-tag">MIT License</span>
+        </div>
+        <p class="license-summary" data-i18n-html="licenses.admob.summary">
+          Capacitor-Plugin, das Google AdMob (Werbung) in die mobilen Apps einbindet. ·
+          <a href="https://github.com/capacitor-community/admob" target="_blank" rel="noopener">github.com/capacitor-community/admob</a>
+        </p>
+        <details class="license-details">
+          <summary data-i18n="licenses.show">Lizenztext anzeigen</summary>
+          <pre class="license-text" data-license="assets/licenses/capacitor-community-admob-MIT.txt"><span data-i18n="licenses.fallback">Lizenztext wird beim Aufklappen geladen — oder direkt öffnen:</span> <a href="assets/licenses/capacitor-community-admob-MIT.txt" target="_blank" rel="noopener">capacitor-community-admob-MIT.txt</a></pre>
+        </details>
+      </article>
+
+      <article class="license-item">
+        <div class="license-head">
+          <span class="license-name">RevenueCat Purchases</span>
+          <span class="license-tag">MIT License</span>
+        </div>
+        <p class="license-summary" data-i18n-html="licenses.revenuecat.summary">
+          Capacitor-Plugin samt nativen SDKs für In-App-Käufe über RevenueCat. ·
+          <a href="https://github.com/RevenueCat/purchases-capacitor" target="_blank" rel="noopener">github.com/RevenueCat/purchases-capacitor</a>
+        </p>
+        <details class="license-details">
+          <summary data-i18n="licenses.show">Lizenztext anzeigen</summary>
+          <pre class="license-text" data-license="assets/licenses/revenuecat-purchases-capacitor-MIT.txt"><span data-i18n="licenses.fallback">Lizenztext wird beim Aufklappen geladen — oder direkt öffnen:</span> <a href="assets/licenses/revenuecat-purchases-capacitor-MIT.txt" target="_blank" rel="noopener">revenuecat-purchases-capacitor-MIT.txt</a></pre>
+        </details>
+      </article>
+
+      <article class="license-item">
+        <div class="license-head">
           <span class="license-name">Inconsolata</span>
           <span class="license-tag">SIL Open Font License 1.1</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.inconsolata.summary">
+        <p class="license-summary" data-i18n-html="licenses.inconsolata.summary">
           Die Schriftart der gesamten Oberfläche. ·
           <a href="https://fonts.google.com/specimen/Inconsolata" target="_blank" rel="noopener">fonts.google.com</a>
         </p>
@@ -109,7 +153,7 @@
           <span class="license-name">Material Symbols</span>
           <span class="license-tag">Apache License 2.0</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.materialsymbols.summary">
+        <p class="license-summary" data-i18n-html="licenses.materialsymbols.summary">
           Die Icon-Schrift für HUD und Menüs (Pause, Karte, Booster …). ·
           <a href="https://fonts.google.com/icons" target="_blank" rel="noopener">fonts.google.com/icons</a>
         </p>
@@ -121,10 +165,24 @@
 
       <article class="license-item">
         <div class="license-head">
+          <span class="license-name" data-i18n="licenses.sdks.title">Native Plattform-SDKs</span>
+          <span class="license-tag" data-i18n="licenses.sdks.tag">Proprietär</span>
+        </div>
+        <p class="license-summary" data-i18n-html="licenses.sdks.summary">
+          Die mobilen Apps enthalten ausserdem proprietäre Bibliotheken von Google (Mobile Ads
+          SDK, User Messaging Platform, Play Billing, Play Games Services) unter den
+          <a href="https://developers.google.com/terms" target="_blank" rel="noopener">Google-APIs-Nutzungsbedingungen</a>
+          bzw. der Android-SDK-Lizenz. Unter iOS kommen die Systemframeworks GameKit und StoreKit
+          von Apple zum Einsatz.
+        </p>
+      </article>
+
+      <article class="license-item">
+        <div class="license-head">
           <span class="license-name">Audio</span>
           <span class="license-tag">Pixabay Content License</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.audio.summary">
+        <p class="license-summary" data-i18n-html="licenses.audio.summary">
           Soundeffekte von <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a>, genutzt unter der Pixabay Content License. Musik komponiert von Daniel Schultes.
         </p>
       </article>
@@ -133,8 +191,8 @@
         <div class="license-head">
           <span class="license-name">Icons</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n-html="licenses.icons.summary">
-          Das „Goldene Flügel"-Icon („Feather Wing") stammt von <a href="https://www.svgrepo.com/svg/499156/feather-wing" target="_blank" rel="noopener">SVG Repo</a> und ist frei kommerziell nutzbar.
+        <p class="license-summary" data-i18n-html="licenses.icons.summary">
+          Das „Goldene Flügel“-Icon („Feather Wing“) stammt von <a href="https://www.svgrepo.com/svg/499156/feather-wing" target="_blank" rel="noopener">SVG Repo</a> und ist frei kommerziell nutzbar.
         </p>
       </article>
 
@@ -143,16 +201,14 @@
           <span class="license-name" data-i18n="licenses.ai.title">KI-Transparenz</span>
           <span class="license-tag">EU AI Act</span>
         </div>
-        <p class="legal-card-summary" style="color:var(--ink-70);font-size:13px;margin:8px 0 0;" data-i18n="licenses.ai.summary">
+        <p class="license-summary" data-i18n="licenses.ai.summary">
           Teile des Artworks (z. B. Store- und Website-Grafiken) sowie die Übersetzungen von
           App und Website wurden mit Unterstützung generativer KI erstellt und redaktionell
           geprüft. Die App selbst enthält keine KI-Systeme.
         </p>
       </article>
 
-      <div class="legal-block" style="margin-top:30px;opacity:.6;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
-        Swiss Innovation Studios · 2026
-      </div>
+      <div class="legal-stamp">Swiss Innovation Studios · <span data-year>2026</span></div>
     </div>
   </div>
 </main>
@@ -162,7 +218,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-          <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+          <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
           <span class="brand-text">
             <span class="brand-name">Teide</span>
             <span class="brand-sub">Glide the Canaries</span>
@@ -171,32 +227,32 @@
         <p data-i18n="footer.tagline">Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln. Gebaut mit Three.js.</p>
       </div>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colSite" aria-label="Seite">
-        <h4 data-i18n="footer.colSite">Seite</h4>
+        <h3 data-i18n="footer.colSite">Seite</h3>
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
         <a href="index.html#download" data-i18n="nav.download">Download</a>
       </nav>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colLegal" aria-label="Rechtliches">
-        <h4 data-i18n="footer.colLegal">Rechtliches</h4>
+        <h3 data-i18n="footer.colLegal">Rechtliches</h3>
         <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
         <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
         <a href="lizenzen.html" data-i18n="footer.licenses">Open-Source-Lizenzen</a>
       </nav>
       <div class="footer-col">
-        <h4 data-i18n="footer.colContact">Kontakt</h4>
+        <h3 data-i18n="footer.colContact">Kontakt</h3>
         <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>
-        <p>Swiss Innovation Studios<br>3013 Bern, Schweiz</p>
+        <p>Swiss Innovation Studios<br>3013 Bern, <span data-i18n="legal.country">Schweiz</span></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Swiss Innovation Studios</span>
+      <span>© <span data-year>2026</span> Swiss Innovation Studios</span>
       <span>Made with Three.js · Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>
 
-<script src="js/i18n.js?v=20261001"></script>
-<script src="js/main.js?v=20261001"></script>
+<script src="js/i18n.js?v=20261028"></script>
+<script src="js/main.js?v=20261028"></script>
 </body>
 </html>

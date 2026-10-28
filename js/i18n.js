@@ -6,6 +6,7 @@
      data-i18n="key"                  → textContent
      data-i18n-html="key"             → innerHTML (for strings with <a>/<strong>/<br>)
      data-i18n-attr="attr:key;attr:key" → one or more attributes (title, content, alt, aria-label…)
+   The header language control is a native <select>; its options are static HTML.
 
    Language resolution: ?lang=xx  →  localStorage  →  navigator.language  →  'de'. */
 (() => {
@@ -17,11 +18,7 @@
   // Cache-bust token — bump on every website change AND keep it in sync with the
   // ?v= on the css/js <link>/<script> tags in the four HTML pages. Prevents a
   // browser from pairing fresh HTML with a stale cached stylesheet/script/dict.
-  const ASSET_VER = '20261001';
-  // 2-letter language codes shown as chips. NOT emoji flags — Windows Chrome/Edge
-  // have no flag glyphs and would fall back to bare "DE"/"GB" letters.
-  const CODES = { de: 'DE', en: 'EN', es: 'ES', fr: 'FR', it: 'IT', nl: 'NL', pl: 'PL' };
-  const NAMES = { de: 'Deutsch', en: 'English', es: 'Español', fr: 'Français', it: 'Italiano', nl: 'Nederlands', pl: 'Polski' };
+  const ASSET_VER = '20261028';
   // i18n/ sits next to this script (js/) — one level up from js/.
   const base = new URL('../i18n/', document.currentScript ? document.currentScript.src : location.href);
 
@@ -77,10 +74,7 @@
   }
 
   function syncSelectorUI() {
-    document.querySelectorAll('[data-lang-current-code]').forEach((el) => (el.textContent = CODES[current]));
-    document.querySelectorAll('.lang-menu button[data-lang]').forEach((btn) =>
-      btn.setAttribute('aria-selected', String(btn.getAttribute('data-lang') === current))
-    );
+    document.querySelectorAll('[data-lang-select] select').forEach((sel) => { sel.value = current; });
   }
 
   function setLanguage(lang, persist) {
@@ -100,32 +94,12 @@
     });
   }
 
-  /* ---- Header language selector ---------------------------------------- */
+  /* ---- Header language selector (native <select>; options live in the HTML
+          so the control works without JS, this only wires the change) ------ */
   function buildSelector(root) {
-    const menu = root.querySelector('.lang-menu');
-    const btn = root.querySelector('.lang-btn');
-    if (!menu || !btn) return;
-
-    menu.innerHTML = LANGS.map((l) =>
-      `<li><button type="button" role="option" data-lang="${l}" aria-selected="false">` +
-      `<span class="lang-chip">${CODES[l]}</span><span>${NAMES[l]}</span></button></li>`
-    ).join('');
-
-    const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
-    const open = () => { menu.hidden = false; btn.setAttribute('aria-expanded', 'true'); };
-
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.hidden ? open() : close();
-    });
-    menu.addEventListener('click', (e) => {
-      const item = e.target.closest('button[data-lang]');
-      if (!item) return;
-      setLanguage(item.getAttribute('data-lang'), true);
-      close();
-    });
-    document.addEventListener('click', (e) => { if (!root.contains(e.target)) close(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    const sel = root.querySelector('select');
+    if (!sel) return;
+    sel.addEventListener('change', () => setLanguage(sel.value, true));
   }
 
   function boot() {

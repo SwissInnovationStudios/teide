@@ -6,25 +6,33 @@
 <title data-i18n="meta.privacy.title">Datenschutzerklärung — Teide</title>
 <meta name="description" data-i18n-attr="content:meta.privacy.desc" content="Datenschutzerklärung für die Website und die App Teide: Glide the Canaries.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://swissinnovationstudios.github.io/teide/datenschutz.html">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-attr="content:meta.privacy.title" content="Datenschutzerklärung — Teide">
+<meta property="og:description" data-i18n-attr="content:meta.privacy.desc" content="Datenschutzerklärung für die Website und die App Teide: Glide the Canaries.">
+<meta property="og:image" content="https://swissinnovationstudios.github.io/teide/assets/og-image.jpg">
+<meta property="og:url" content="https://swissinnovationstudios.github.io/teide/datenschutz.html">
+<meta property="og:locale" content="de_CH">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="css/styles.css?v=20261001">
+<link rel="stylesheet" href="css/styles.css?v=20261028">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-      <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+      <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
       <span class="brand-text">
         <span class="brand-name">Teide</span>
         <span class="brand-sub">Glide the Canaries</span>
       </span>
     </a>
     <div class="nav-end">
-      <nav class="nav-links" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
+      <nav class="nav-links" id="primary-nav" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
@@ -32,13 +40,19 @@
         <a class="btn btn-coral nav-cta" href="https://swissinnovationstudios.github.io/teide-game/" data-i18n="nav.play">Spielen</a>
       </nav>
       <div class="lang-select" data-lang-select>
-        <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-attr="aria-label:aria.langSelect" aria-label="Sprache wählen">
-          <span class="lang-chip" data-lang-current-code>DE</span>
-          <span class="material-symbols-outlined lang-caret">expand_more</span>
-        </button>
-        <ul class="lang-menu" role="listbox" hidden></ul>
+        <label class="visually-hidden" for="lang-select" data-i18n="aria.langSelect">Sprache wählen</label>
+        <select id="lang-select" class="lang-btn">
+          <option value="de">DE · Deutsch</option>
+          <option value="en">EN · English</option>
+          <option value="es">ES · Español</option>
+          <option value="fr">FR · Français</option>
+          <option value="it">IT · Italiano</option>
+          <option value="nl">NL · Nederlands</option>
+          <option value="pl">PL · Polski</option>
+        </select>
+        <span class="material-symbols-outlined lang-caret" aria-hidden="true">expand_more</span>
       </div>
-      <button class="nav-toggle" type="button" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -50,14 +64,14 @@
     <div class="legal-head">
       <p class="eyebrow" data-i18n="legal.eyebrow">Rechtliches</p>
       <h1 data-i18n="privacy.h1">Datenschutzerklärung</h1>
-      <p class="legal-updated" data-i18n="privacy.updated">Stand: Juni 2026</p>
+      <p class="legal-updated" data-i18n="privacy.updated">Stand: Oktober 2026</p>
     </div>
 
     <div class="legal-card">
       <p data-i18n="privacy.intro">
         Der Schutz deiner persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung
         informiert dich darüber, welche Daten beim Besuch dieser Website sowie bei der
-        Nutzung der App „Teide: Glide the Canaries" verarbeitet werden. Die Verarbeitung
+        Nutzung der App „Teide: Glide the Canaries“ verarbeitet werden. Die Verarbeitung
         richtet sich nach der EU-Datenschutz-Grundverordnung (DSGVO), soweit anwendbar,
         sowie nach dem Schweizer Datenschutzgesetz (DSG).
       </p>
@@ -69,7 +83,7 @@
           <strong>Swiss Innovation Studios</strong><br>
           Blumenweg 7<br>
           3013 Bern<br>
-          Schweiz<br>
+          <span data-i18n="legal.country">Schweiz</span><br>
           <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>
         </address>
       </div>
@@ -77,13 +91,14 @@
       <h2 data-i18n="privacy.s2.h">2. Geltungsbereich</h2>
       <p data-i18n="privacy.s2.p1">
         Diese Datenschutzerklärung gilt für (1) diese Website, über die die App vorgestellt
-        wird, und (2) die mobile App „Teide", ein minimalistisches Gleitflug-Spiel.
+        wird, und (2) die mobile App „Teide“, ein minimalistisches Gleitflug-Spiel.
       </p>
       <p data-i18n="privacy.s2.p2">
-        Die App ist ein offline lauffähiges Einzelspieler-Spiel. Es werden keine eigenen
-        Server betrieben und keine Benutzerkonten geführt. Über die Abwicklung von
-        In-App-Käufen (RevenueCat, siehe Ziffer 4.5) und die Werbung in den mobilen Apps
-        (Google AdMob, siehe Ziffer 4.6) hinaus werden keine weiteren Tracking-, Analyse-
+        Die App ist ein offline lauffähiges Einzelspieler-Spiel. Es werden keine eigenen Server
+        betrieben und keine Benutzerkonten geführt. Über die Abwicklung von In-App-Käufen
+        (RevenueCat, siehe Ziffer 4.5), die Werbung in den mobilen Apps (Google AdMob, siehe
+        Ziffer 4.6) und die optionalen Spieldienste der Plattformen (Google Play Spiele bzw.
+        Apple Game Center, siehe Ziffer 4.7) hinaus werden keine weiteren Tracking-, Analyse-
         oder Werbedienste eingebunden.
       </p>
 
@@ -115,8 +130,11 @@
       <h3 data-i18n="privacy.s3.cookies.h">3.2 Cookies &amp; Tracking</h3>
       <p data-i18n-html="privacy.s3.cookies.body">
         Diese Website setzt <strong>keine Cookies</strong> und verwendet keine Analyse-,
-        Tracking- oder Werbe-Tools. Es findet kein Profiling und keine reichweiten-Messung
-        statt.
+        Tracking- oder Werbe-Tools. Es findet kein Profiling und keine Reichweitenmessung statt.
+        Einzig deine Sprachwahl wird im lokalen Speicher deines Browsers (localStorage)
+        abgelegt, damit die Seite beim nächsten Besuch in derselben Sprache erscheint. Dieser
+        Eintrag enthält keine personenbezogenen Daten, wird weder an uns noch an Dritte
+        übermittelt und lässt sich jederzeit über die Browser-Einstellungen löschen.
       </p>
 
       <h3 data-i18n="privacy.s3.fonts.h">3.3 Schriftarten</h3>
@@ -136,7 +154,7 @@
         sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
       </p>
 
-      <h2 data-i18n="privacy.s4.h">4. Die App „Teide"</h2>
+      <h2 data-i18n="privacy.s4.h">4. Die App „Teide“</h2>
 
       <h3 data-i18n="privacy.s4.local.h">4.1 Lokal gespeicherte Daten</h3>
       <p data-i18n-html="privacy.s4.local.p1">
@@ -157,18 +175,22 @@
 
       <h3 data-i18n="privacy.s4.servers.h">4.2 Keine eigenen Server</h3>
       <p data-i18n="privacy.s4.servers.body">
-        Die App sendet keine technischen Daten (z. B. IP-Adresse, Geräte-ID,
-        Nutzungsanalyse) an eigene Server. Es werden keine Analyse-Bibliotheken oder
-        Crash-Reporting-Dienste eingesetzt. Es besteht keine Registrierungs- oder
-        Login-Pflicht. Ein Drittanbieter ist in zwei Fällen eingebunden: bei der Abwicklung
-        von In-App-Käufen (siehe Ziffer 4.5) und bei der Werbung in den mobilen Apps über
-        Google AdMob (siehe Ziffer 4.6).
+        Die App sendet keine technischen Daten (z. B. IP-Adresse, Geräte-ID, Nutzungsanalyse) an
+        eigene Server. Es werden keine Analyse-Bibliotheken oder Crash-Reporting-Dienste
+        eingesetzt. Es besteht keine Registrierungs- oder Login-Pflicht. Drittanbieter sind in
+        drei Fällen eingebunden: bei der Abwicklung von In-App-Käufen (siehe Ziffer 4.5), bei
+        der Werbung in den mobilen Apps über Google AdMob (siehe Ziffer 4.6) und bei den
+        optionalen Spieldiensten Google Play Spiele bzw. Apple Game Center (siehe Ziffer 4.7).
       </p>
 
       <h3 data-i18n="privacy.s4.permissions.h">4.3 Geräteberechtigungen</h3>
       <p data-i18n="privacy.s4.permissions.body">
-        Die App benötigt keine besonderen Geräteberechtigungen wie Kamera, Mikrofon,
-        Standort oder Zugriff auf deine Kontakte/Fotos.
+        Die App benötigt keine besonderen Geräteberechtigungen wie Kamera, Mikrofon, Standort
+        oder Zugriff auf deine Kontakte/Fotos. Wählst du in den Einstellungen die
+        Neigungssteuerung, fragt die App unter iOS einmalig den Zugriff auf die
+        Bewegungssensoren an; die Sensorwerte werden ausschliesslich auf dem Gerät zur Steuerung
+        verwendet und nicht übertragen. Unter Android nutzt die App für die Werbung (siehe
+        Ziffer 4.6) die Werbe-ID-Berechtigung.
       </p>
 
       <h3 data-i18n="privacy.s4.stores.h">4.4 Bezug über App-Stores</h3>
@@ -233,10 +255,34 @@
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.
       </p>
 
+      <h3 data-i18n="privacy.s4.games.h">4.7 Spieldienste: Google Play Spiele & Apple Game Center</h3>
+      <p data-i18n="privacy.s4.games.p1">
+        Die mobilen Apps binden optional die Spieldienste der jeweiligen Plattform ein: Google
+        Play Spiele (Google Play Games Services, Google Ireland Ltd.) unter Android und Apple
+        Game Center (Apple Inc.) unter iOS. Darüber bietet die App Erfolge und die Bestenliste
+        „Best Flight“ an. Beim Start prüft die App, ob dein Gerät bereits bei dem Dienst
+        angemeldet ist; ist das der Fall, wird die Verbindung automatisch hergestellt.
+        Andernfalls kannst du dich in den Einstellungen anmelden – unter iOS kann das System die
+        Game-Center-Anmeldung auch beim ersten Start anbieten; du kannst sie abbrechen. Das
+        Spiel ist ohne Anmeldung vollständig spielbar.
+      </p>
+      <p data-i18n="privacy.s4.games.p2">
+        Bist du angemeldet, übermittelt die App freigeschaltete Erfolge und deine beste
+        Flugpunktzahl an Google bzw. Apple. Dort werden sie deinem Spielerprofil zugeordnet und
+        – je nach deinen dortigen Einstellungen – anderen Spielern in der Bestenliste angezeigt.
+        Die App erhält im Gegenzug lediglich deinen Spieler-Anzeigenamen zur Darstellung in den
+        Einstellungen; er wird nicht an uns übermittelt und nicht dauerhaft gespeichert. Die
+        Verarbeitung durch Google bzw. Apple erfolgt in deren eigener Verantwortung nach den
+        unter Ziffer 4.4 verlinkten Datenschutzbestimmungen. Rechtsgrundlage ist Art. 6 Abs. 1
+        lit. b DSGVO (Bereitstellung der von dir genutzten Funktion) bzw. das Schweizer DSG.
+        Abmelden kannst du dich jederzeit in der Google-Play-Spiele-App bzw. in den
+        iOS-Einstellungen unter Game Center.
+      </p>
+
       <h2 data-i18n="privacy.s5.h">5. Rechtsgrundlagen</h2>
       <p data-i18n="privacy.s5.intro">Soweit die DSGVO anwendbar ist, stützt sich die Verarbeitung insbesondere auf:</p>
       <ul data-i18n-html="privacy.s5.list">
-        <li>Art. 6 Abs. 1 lit. b DSGVO — Erfüllung (vor-)vertraglicher Pflichten (z. B. Bearbeitung von Anfragen, Abwicklung von In-App-Käufen)</li>
+        <li>Art. 6 Abs. 1 lit. b DSGVO — Erfüllung (vor-)vertraglicher Pflichten (z. B. Bearbeitung von Anfragen, Abwicklung von In-App-Käufen, Spieldienste)</li>
         <li>Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse (sichere, stabile Bereitstellung von Website und App)</li>
       </ul>
       <p data-i18n="privacy.s5.swiss">Für Nutzer in der Schweiz erfolgt die Verarbeitung nach dem Schweizer Datenschutzgesetz (DSG).</p>
@@ -244,7 +290,7 @@
       <h2 data-i18n="privacy.s6.h">6. Speicherdauer</h2>
       <p data-i18n="privacy.s6.body">
         Lokal in der App gespeicherte Daten verbleiben so lange auf deinem Gerät, bis du
-        sie in der App zurücksetzt (Funktion „Spielstand zurücksetzen" in den
+        sie in der App zurücksetzt (Funktion „Spielstand zurücksetzen“ in den
         Einstellungen) oder die App deinstallierst. Da keine personenbezogenen Daten auf
         eigenen Servern gespeichert werden, existiert dort keine separate Speicherdauer.
         Für die durch GitHub bzw. die App-Store-Betreiber verarbeiteten Daten gelten deren
@@ -253,20 +299,21 @@
 
       <h2 data-i18n="privacy.s7.h">7. Weitergabe an Dritte</h2>
       <p data-i18n="privacy.s7.body">
-        Eine Weitergabe deiner Daten an Dritte findet nicht statt — ausser an die
-        technisch notwendigen Dienstleister für den Betrieb der Website (GitHub Pages), die
-        Bereitstellung der App über die App-Stores (Apple, Google) sowie die Abwicklung von
-        In-App-Käufen (RevenueCat als Auftragsverarbeiter), jeweils in deren eigener
-        Verantwortung bzw. in unserem Auftrag.
+        Eine Weitergabe deiner Daten an Dritte findet nicht statt — ausser an die technisch
+        notwendigen Dienstleister für den Betrieb der Website (GitHub Pages), die Bereitstellung
+        der App über die App-Stores (Apple, Google), die Abwicklung von In-App-Käufen
+        (RevenueCat als Auftragsverarbeiter), die Werbung in den mobilen Apps (Google AdMob)
+        sowie die optionalen Spieldienste (Google Play Spiele, Apple Game Center), jeweils in
+        deren eigener Verantwortung bzw. in unserem Auftrag.
       </p>
 
       <h2 data-i18n="privacy.s8.h">8. Datenübermittlung in Drittländer</h2>
       <p data-i18n="privacy.s8.body">
-        Beim Hosting über GitHub Pages, bei der Nutzung der App-Stores sowie bei der
-        Abwicklung von In-App-Käufen über RevenueCat kann es zu einer Verarbeitung in
-        Staaten ausserhalb der Schweiz und der EU/EWR (insbesondere
-        in den USA) kommen. Die genannten Anbieter stützen solche Übermittlungen auf
-        geeignete Garantien im Sinne der Art. 44 ff. DSGVO (z. B.
+        Beim Hosting über GitHub Pages, bei der Nutzung der App-Stores, der Werbung über Google
+        AdMob, der Spieldienste von Google und Apple sowie bei der Abwicklung von In-App-Käufen
+        über RevenueCat kann es zu einer Verarbeitung in Staaten ausserhalb der Schweiz und der
+        EU/EWR (insbesondere in den USA) kommen. Die genannten Anbieter stützen solche
+        Übermittlungen auf geeignete Garantien im Sinne der Art. 44 ff. DSGVO (z. B.
         EU-Standardvertragsklauseln). Details findest du in den jeweils oben verlinkten
         Datenschutzerklärungen.
       </p>
@@ -317,9 +364,7 @@
         <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>.
       </p>
 
-      <div class="legal-block" style="margin-top:30px;opacity:.6;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
-        Swiss Innovation Studios · 2026
-      </div>
+      <div class="legal-stamp">Swiss Innovation Studios · <span data-year>2026</span></div>
     </div>
   </div>
 </main>
@@ -329,7 +374,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-          <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+          <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
           <span class="brand-text">
             <span class="brand-name">Teide</span>
             <span class="brand-sub">Glide the Canaries</span>
@@ -338,32 +383,32 @@
         <p data-i18n="footer.tagline">Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln. Gebaut mit Three.js.</p>
       </div>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colSite" aria-label="Seite">
-        <h4 data-i18n="footer.colSite">Seite</h4>
+        <h3 data-i18n="footer.colSite">Seite</h3>
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
         <a href="index.html#download" data-i18n="nav.download">Download</a>
       </nav>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colLegal" aria-label="Rechtliches">
-        <h4 data-i18n="footer.colLegal">Rechtliches</h4>
+        <h3 data-i18n="footer.colLegal">Rechtliches</h3>
         <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
         <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
         <a href="lizenzen.html" data-i18n="footer.licenses">Open-Source-Lizenzen</a>
       </nav>
       <div class="footer-col">
-        <h4 data-i18n="footer.colContact">Kontakt</h4>
+        <h3 data-i18n="footer.colContact">Kontakt</h3>
         <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>
-        <p>Swiss Innovation Studios<br>3013 Bern, Schweiz</p>
+        <p>Swiss Innovation Studios<br>3013 Bern, <span data-i18n="legal.country">Schweiz</span></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Swiss Innovation Studios</span>
+      <span>© <span data-year>2026</span> Swiss Innovation Studios</span>
       <span>Made with Three.js · Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>
 
-<script src="js/i18n.js?v=20261001"></script>
-<script src="js/main.js?v=20261001"></script>
+<script src="js/i18n.js?v=20261028"></script>
+<script src="js/main.js?v=20261028"></script>
 </body>
 </html>

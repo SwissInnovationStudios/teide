@@ -30,7 +30,11 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url('../fonts/material-symbols-outlined.woff2') format('woff2');
+  /* SUBSET — only these ligatures exist (regenerate when adding an icon, see
+     website/README.md): air build expand_more explore flight_land flight_takeoff
+     landscape menu palette phone_iphone play_arrow public rocket_launch wifi_off
+     person_off emoji_events workspace_premium gamepad school smart_display */
+  src: url('../fonts/material-symbols-subset.woff2') format('woff2');
 }
 
 /* ---- Tokens -------------------------------------------------------------- */
@@ -46,6 +50,8 @@
   --sage-2:     #7a9466;
   --teal:       #2e7d96;   /* ocean accent (from the key-art) */
   --teal-deep:  #234e63;
+  --ocean:      #a3bfc8;   /* archipelago map: shallow water (sage-tinted teal) */
+  --ocean-deep: #86a9b5;   /* …and the open-sea edge of the gradient */
 
   --ink-08: rgba(42, 51, 56, 0.08);
   --ink-12: rgba(42, 51, 56, 0.12);
@@ -88,8 +94,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Soft, slowly-drifting sage→paper backdrop with a faint ocean-teal glow —
-   echoes the cool key-art palette without fighting the hero image. */
+/* Soft sage→paper backdrop with a faint ocean-teal glow — echoes the cool
+   key-art palette without fighting the hero image. Static on purpose: an
+   animated fixed full-screen gradient repaints every frame on mobile. */
 body::before {
   content: '';
   position: fixed;
@@ -99,10 +106,7 @@ body::before {
     radial-gradient(120% 90% at 85% -10%, rgba(46, 125, 150, 0.14), rgba(46, 125, 150, 0) 55%),
     radial-gradient(120% 80% at 8% 0%,   rgba(83, 110, 67, 0.10), rgba(83, 110, 67, 0) 50%),
     linear-gradient(180deg, var(--sky) 0%, #ccd9ce 45%, var(--paper) 100%);
-  background-size: 100% 100%, 100% 100%, 100% 200%;
-  animation: skyDrift 26s ease-in-out infinite alternate;
 }
-@keyframes skyDrift { to { background-position: 0 0, 0 0, 0 28%; } }
 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -144,6 +148,7 @@ a { color: inherit; text-decoration: none; }
 .eyebrow.accent { color: var(--green); opacity: 0.95; }
 
 .section { padding: clamp(64px, 10vw, 130px) 0; position: relative; }
+.section-tight { padding-top: clamp(24px, 4vw, 48px); }
 .section-head { max-width: 640px; margin-bottom: clamp(36px, 5vw, 56px); }
 .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 
@@ -185,9 +190,6 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 .btn:active { transform: translateY(0); }
 
-.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.btn-primary:hover { background: var(--ink-2); box-shadow: var(--shadow-md); }
-
 /* Accent button (meadow green). Class name kept as .btn-coral so existing
    markup needn't change — it is the green accent CTA throughout. */
 .btn-coral { background: var(--green); border-color: var(--green); color: #fff; }
@@ -200,7 +202,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .btn-light { background: #fff; border-color: #fff; color: var(--ink); }
 .btn-light:hover { background: #fff; box-shadow: var(--shadow-md); }
 
-/* Store badges — "icon + two-line label". Placeholder links until store URLs exist. */
+/* Store badges — "icon + two-line label". */
 .store-badges { display: flex; flex-wrap: wrap; gap: 14px; }
 .store-badge {
   display: inline-flex;
@@ -218,21 +220,6 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .store-badge-text { display: flex; flex-direction: column; line-height: 1.2; text-align: left; }
 .store-badge-text small { font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.7; }
 .store-badge-text span { font-size: 15px; letter-spacing: 0.08em; }
-.store-badge[aria-disabled="true"] { opacity: 0.62; cursor: not-allowed; }
-.store-badge[aria-disabled="true"]:hover { transform: none; box-shadow: none; }
-.store-badge.is-soon { position: relative; }
-.store-badge.is-soon::after {
-  content: 'bald';
-  position: absolute;
-  top: -8px; right: -8px;
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background: var(--green);
-  color: #fff;
-  padding: 2px 7px;
-  border-radius: 999px;
-}
 
 /* =============================================================================
    Top navigation — sticky frosted bar (echoes the in-game HUD chips)
@@ -290,43 +277,24 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 
 /* ---- Header right cluster + language selector ------------------------- */
 .nav-end { display: flex; align-items: center; gap: 10px; }
-.lang-select { position: relative; }
+/* Native <select> (keyboard, screen reader and mobile pickers for free),
+   dressed as the chip pill; the caret is decorative and sits over the control. */
+.lang-select { position: relative; display: inline-flex; align-items: center; }
 .lang-btn {
-  display: inline-flex; align-items: center; gap: 7px;
+  appearance: none; -webkit-appearance: none;
   font: inherit; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--ink); background: transparent;
   border: 1px solid var(--ink-12); border-radius: 999px;
-  padding: 7px 12px; cursor: pointer;
+  padding: 8px 30px 8px 12px; cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
 }
 .lang-btn:hover { background: var(--ink-08); border-color: var(--ink-18); }
-.lang-chip {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.06em; line-height: 1;
-  color: var(--ink); background: var(--ink-08);
-  border-radius: 6px; padding: 4px 6px;
+.lang-btn option { font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink); background: var(--paper); }
+.lang-caret { position: absolute; right: 8px; font-size: 18px; opacity: 0.55; pointer-events: none; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
-.lang-caret { font-size: 18px; opacity: 0.55; }
-.lang-menu {
-  position: absolute; top: calc(100% + 10px); right: 0;
-  min-width: 176px; margin: 0; padding: 6px; list-style: none;
-  background: rgba(244, 241, 232, 0.97);
-  backdrop-filter: blur(18px) saturate(1.05);
-  -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  border: 1px solid var(--ink-12); border-radius: 16px;
-  box-shadow: var(--shadow-md); z-index: 60;
-}
-.lang-menu[hidden] { display: none; }
-.lang-menu li { margin: 0; }
-.lang-menu button {
-  display: flex; align-items: center; gap: 11px; width: 100%;
-  font: inherit; font-size: 13px; text-align: left; color: var(--ink);
-  background: transparent; border: 0; border-radius: 10px;
-  padding: 9px 12px; cursor: pointer;
-  transition: background 0.15s;
-}
-.lang-menu button:hover { background: var(--ink-08); }
-.lang-menu button[aria-selected="true"] { background: var(--ink-12); font-weight: 700; }
-.lang-menu .lang-chip { min-width: 26px; text-align: center; }
 
 /* =============================================================================
    Hero
@@ -370,6 +338,14 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   font-weight: 500;
 }
 .hero h1 .tint { color: var(--green); }
+.hero-hook {
+  margin-top: 22px;
+  max-width: 28em;
+  font-size: clamp(15px, 1.7vw, 19px);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.hero-hook .tint { color: var(--green); }
 .hero-lead {
   margin-top: 24px;
   max-width: 30em;
@@ -473,27 +449,6 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 }
 
 /* =============================================================================
-   "Was ist Teide" — statement / pitch band
-   ========================================================================== */
-.pitch { text-align: center; }
-.pitch-quote {
-  max-width: 18em;
-  margin: 0 auto;
-  font-size: clamp(22px, 3.4vw, 38px);
-  line-height: 1.4;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-}
-.pitch-quote .tint { color: var(--green); }
-.pitch-sub {
-  max-width: 44em;
-  margin: 26px auto 0;
-  font-size: clamp(14px, 1.4vw, 16px);
-  color: var(--ink-70);
-  line-height: 1.85;
-}
-
-/* =============================================================================
    Features grid
    ========================================================================== */
 .feature-grid {
@@ -527,60 +482,104 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .feature.accent .feature-icon { background: var(--green-12); border-color: var(--green-30); color: var(--green); }
 
 /* =============================================================================
-   Islands — horizontal compass-strip of the seven Canaries
+   Archipelago map — inline SVG from the game's heightmap (tools/build-map.mjs)
    ========================================================================== */
-.islands-strip {
-  display: flex;
-  gap: 14px;
-  overflow-x: auto;
-  padding: 8px 4px 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+.map-outer { position: relative; }
+.map-wrap {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  padding: clamp(12px, 2.5vw, 28px);
+  background:
+    radial-gradient(90% 120% at 50% 110%, rgba(244, 241, 232, 0.18), rgba(244, 241, 232, 0) 60%),
+    linear-gradient(180deg, var(--ocean) 0%, var(--ocean-deep) 100%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-lg);
 }
-.islands-strip::-webkit-scrollbar { height: 6px; }
-.islands-strip::-webkit-scrollbar-thumb { background: var(--ink-18); border-radius: 999px; }
-.island {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  width: 210px;
+.map-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.island { cursor: pointer; outline: none; }
+.island path {
+  fill: var(--green);
+  stroke: var(--sage-2);
+  stroke-width: 1.5;
+  transition: fill 0.25s, filter 0.3s;
+}
+.island:hover path, .island:focus-visible path, .island.is-hover path {
+  fill: var(--green-2);
+  filter: drop-shadow(0 8px 10px rgba(42, 51, 56, 0.35));
+}
+.airport { cursor: pointer; outline: none; }
+.airport-halo { fill: rgba(244, 241, 232, 0); transition: fill 0.25s; }
+.airport:hover .airport-halo, .airport:focus-visible .airport-halo, .airport.is-hover .airport-halo { fill: rgba(244, 241, 232, 0.28); }
+.airport-ring { fill: rgba(244, 241, 232, 0.92); stroke: var(--ink); stroke-width: 2; transition: stroke 0.25s; }
+.airport-dot { fill: var(--ink); }
+.airport.is-current .airport-ring { stroke: var(--green); stroke-width: 3; }
+.airport.is-current .airport-halo { fill: rgba(83, 110, 67, 0.22); animation: airportPulse 2.2s ease-in-out infinite; }
+@keyframes airportPulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+.map-trail {
+  stroke: var(--paper);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 0.9s;
+}
+.map-trail.is-live { opacity: 0.9; transition: none; }
+.map-plane-body {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 10px 8px rgba(42, 51, 56, 0.35));
+}
+.map-plane-fold { stroke: var(--ink); stroke-width: 1.5; }
+.map-tip {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 14px));
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 22px 20px;
-}
-.island-rank {
-  font-size: 9px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-.island-glyph { height: 64px; display: flex; align-items: flex-end; }
-.island-glyph svg { width: 100%; height: 100%; overflow: visible; }
-.island h3 { font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; }
-.island-tag {
-  display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  padding: 5px 11px;
-  border-radius: 999px;
-  border: 1px solid var(--ink-18);
-  width: fit-content;
-  opacity: 0.85;
+  gap: 2px;
+  padding: 9px 14px;
+  background: rgba(244, 241, 232, 0.92);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(42, 51, 56, 0.2);
+  white-space: nowrap;
+  transition: opacity 0.15s;
 }
-.island-tag .dot { width: 8px; height: 8px; border-radius: 50%; }
-.island-tag .dot.t1 { background: var(--green); }
-.island-tag .dot.t2 { background: var(--sage-2); }
-.island-tag .dot.t3 { background: var(--teal); }
-.island-tag .dot.t4 { background: var(--teal-deep); }
-.island p { font-size: 12px; color: var(--ink-70); line-height: 1.6; }
-.island.home { background: var(--green-08); border-color: var(--green-30); }
+.map-tip.is-below { transform: translate(-50%, 14px); }
+.map-tip[hidden] { display: none; }
+.map-tip-name { font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+.map-tip-sub { font-size: 11px; color: var(--ink-70); }
+.map-tip-here { display: none; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); margin-top: 2px; }
+.map-tip.is-here .map-tip-here { display: block; }
 
 /* =============================================================================
-   Screenshots — landscape phone mockups (game is landscape-only)
+   Trailer + screenshots — landscape phone mockups (game is landscape-only)
    ========================================================================== */
+.trailer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+.trailer-frame {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+.trailer-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+#trailer .trailer { margin-bottom: 0; }
+.trailer-meta { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.trailer-note { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-70); }
+
 .shots {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -619,19 +618,6 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   border-radius: 999px;
   background: rgba(244, 241, 232, 0.18);
 }
-.shot-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink);
-  opacity: 0.5;
-  text-align: center;
-  padding: 20px;
-}
-.shot-placeholder .material-symbols-outlined { font-size: 38px; }
-.shot-placeholder span { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; }
-.shot-placeholder small { font-size: 10px; letter-spacing: 0.06em; opacity: 0.8; text-transform: none; }
 
 /* =============================================================================
    Download CTA band
@@ -652,8 +638,6 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .cta p { margin: 16px auto 30px; max-width: 38em; opacity: 0.92; font-size: clamp(14px,1.4vw,16px); }
 .cta .store-badges { justify-content: center; }
 .cta .store-badge { background: #fff; color: var(--ink); border-color: #fff; }
-.cta .store-badge[aria-disabled="true"] { opacity: 0.78; }
-.cta .store-badge.is-soon::after { background: var(--ink); color: #fff; }
 
 /* =============================================================================
    Footer
@@ -672,7 +656,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 }
 .footer-brand .brand { margin-bottom: 16px; }
 .footer-brand p { font-size: 12px; color: var(--ink-70); max-width: 28em; line-height: 1.7; }
-.footer-col h4 {
+.footer-col h3 {
   font-size: 10px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -771,26 +755,14 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .legal-block { margin-bottom: 26px; }
 .legal-block address { font-style: normal; line-height: 1.8; font-size: 14px; }
 
-/* Placeholder marker — flags text to verify/fill. */
-.ph {
-  background: var(--green-12);
-  border-bottom: 1px dashed var(--green);
-  padding: 0 4px;
-  border-radius: 3px;
+/* Stamp line at the foot of every legal card (year filled by main.js). */
+.legal-stamp {
+  margin-top: 30px;
+  opacity: 0.6;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
-.note-box {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  background: var(--green-08);
-  border: 1px solid var(--green-30);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 30px;
-  font-size: 12.5px;
-  line-height: 1.65;
-}
-.note-box .material-symbols-outlined { font-size: 20px; color: var(--green); flex-shrink: 0; margin-top: 1px; }
 
 /* Lizenzen list (mirrors in-app licenses screen) */
 .license-item { padding: 20px 0; border-top: 1px solid var(--ink-12); }
@@ -798,6 +770,7 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
 .license-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .license-name { font-weight: 600; font-size: 15px; letter-spacing: 0.04em; }
 .license-tag { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; }
+.license-summary { color: var(--ink-70); font-size: 13px; margin: 8px 0 0; }
 .license-details { margin-top: 10px; }
 .license-details summary {
   font-size: 10px;
@@ -874,10 +847,15 @@ h1, h2, h3 { font-weight: 500; line-height: 1.15; }
   .nav.menu-open .nav-links a { padding: 14px 16px; opacity: 0.9; }
   .nav.menu-open .nav-cta { margin: 6px 0 0; }
   .shots { grid-template-columns: 1fr; }
+  /* Phones: the archipelago is 2.35:1 — keep it legible by letting it pan sideways. */
+  .map-wrap { overflow-x: auto; scrollbar-width: none; }
+  .map-wrap::-webkit-scrollbar { display: none; }
+  .map-svg { min-width: 760px; }
   .feature-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .brand-sub { display: none; }
-  .lang-btn { padding: 7px 9px; }
+  .lang-btn { padding: 7px 26px 7px 9px; }
+  .lang-caret { right: 6px; }
 }
 
 /* =============================================================================

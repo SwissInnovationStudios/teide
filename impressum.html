@@ -6,25 +6,33 @@
 <title data-i18n="meta.imprint.title">Impressum — Teide</title>
 <meta name="description" data-i18n-attr="content:meta.imprint.desc" content="Impressum der Website und App Teide: Glide the Canaries.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://swissinnovationstudios.github.io/teide/impressum.html">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-attr="content:meta.imprint.title" content="Impressum — Teide">
+<meta property="og:description" data-i18n-attr="content:meta.imprint.desc" content="Impressum der Website und App Teide: Glide the Canaries.">
+<meta property="og:image" content="https://swissinnovationstudios.github.io/teide/assets/og-image.jpg">
+<meta property="og:url" content="https://swissinnovationstudios.github.io/teide/impressum.html">
+<meta property="og:locale" content="de_CH">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="css/styles.css?v=20261001">
+<link rel="stylesheet" href="css/styles.css?v=20261028">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-      <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+      <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
       <span class="brand-text">
         <span class="brand-name">Teide</span>
         <span class="brand-sub">Glide the Canaries</span>
       </span>
     </a>
     <div class="nav-end">
-      <nav class="nav-links" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
+      <nav class="nav-links" id="primary-nav" data-i18n-attr="aria-label:aria.mainNav" aria-label="Hauptnavigation">
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
@@ -32,13 +40,19 @@
         <a class="btn btn-coral nav-cta" href="https://swissinnovationstudios.github.io/teide-game/" data-i18n="nav.play">Spielen</a>
       </nav>
       <div class="lang-select" data-lang-select>
-        <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-attr="aria-label:aria.langSelect" aria-label="Sprache wählen">
-          <span class="lang-chip" data-lang-current-code>DE</span>
-          <span class="material-symbols-outlined lang-caret">expand_more</span>
-        </button>
-        <ul class="lang-menu" role="listbox" hidden></ul>
+        <label class="visually-hidden" for="lang-select" data-i18n="aria.langSelect">Sprache wählen</label>
+        <select id="lang-select" class="lang-btn">
+          <option value="de">DE · Deutsch</option>
+          <option value="en">EN · English</option>
+          <option value="es">ES · Español</option>
+          <option value="fr">FR · Français</option>
+          <option value="it">IT · Italiano</option>
+          <option value="nl">NL · Nederlands</option>
+          <option value="pl">PL · Polski</option>
+        </select>
+        <span class="material-symbols-outlined lang-caret" aria-hidden="true">expand_more</span>
       </div>
-      <button class="nav-toggle" type="button" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" data-i18n-attr="aria-label:aria.menu" aria-label="Menü" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -61,7 +75,7 @@
           <strong>Swiss Innovation Studios</strong><br>
           Blumenweg 7<br>
           3013 Bern<br>
-          Schweiz
+          <span data-i18n="legal.country">Schweiz</span>
         </address>
       </div>
 
@@ -88,16 +102,14 @@
       <h2 data-i18n="imprint.responsibleH">Verantwortlich für den Inhalt</h2>
       <p data-i18n="imprint.responsibleBody">
         Verantwortlich für sämtliche Inhalte dieser Website sowie der App
-        „Teide: Glide the Canaries" ist Swiss Innovation Studios (Anschrift wie oben).
+        „Teide: Glide the Canaries“ ist Swiss Innovation Studios (Anschrift wie oben).
       </p>
 
       <h2 data-i18n="imprint.liabilityContentH">Haftung für Inhalte</h2>
       <p data-i18n="imprint.liabilityContentBody">
-        Die Inhalte dieser Seiten wurden mit grösstmöglicher Sorgfalt erstellt. Für
-        die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch
-        keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf
-        diesen Seiten verantwortlich, jedoch nicht verpflichtet, übermittelte oder
-        gespeicherte fremde Informationen zu überwachen.
+        Die Inhalte dieser Seiten wurden mit grösstmöglicher Sorgfalt erstellt. Für die
+        Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr
+        übernehmen.
       </p>
 
       <h2 data-i18n="imprint.liabilityLinksH">Haftung für Links</h2>
@@ -117,9 +129,7 @@
         <a href="lizenzen.html">Open-Source-Lizenzen</a>.
       </p>
 
-      <div class="legal-block" style="margin-top:30px;opacity:.6;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
-        Swiss Innovation Studios · 2026
-      </div>
+      <div class="legal-stamp">Swiss Innovation Studios · <span data-year>2026</span></div>
     </div>
   </div>
 </main>
@@ -129,7 +139,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="index.html" data-i18n-attr="aria-label:aria.brandHome" aria-label="Teide — Startseite">
-          <img class="brand-logo" src="assets/app-icon.png" alt="" width="34" height="34">
+          <img class="brand-logo" src="assets/app-icon-128.webp" alt="" width="34" height="34">
           <span class="brand-text">
             <span class="brand-name">Teide</span>
             <span class="brand-sub">Glide the Canaries</span>
@@ -138,32 +148,32 @@
         <p data-i18n="footer.tagline">Minimalistisches Papierflieger-Gleitspiel über den Kanarischen Inseln. Gebaut mit Three.js.</p>
       </div>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colSite" aria-label="Seite">
-        <h4 data-i18n="footer.colSite">Seite</h4>
+        <h3 data-i18n="footer.colSite">Seite</h3>
         <a href="index.html#features" data-i18n="nav.features">Features</a>
         <a href="index.html#inseln" data-i18n="nav.islands">Inseln</a>
         <a href="index.html#screenshots" data-i18n="nav.screenshots">Screenshots</a>
         <a href="index.html#download" data-i18n="nav.download">Download</a>
       </nav>
       <nav class="footer-col" data-i18n-attr="aria-label:footer.colLegal" aria-label="Rechtliches">
-        <h4 data-i18n="footer.colLegal">Rechtliches</h4>
+        <h3 data-i18n="footer.colLegal">Rechtliches</h3>
         <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
         <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
         <a href="lizenzen.html" data-i18n="footer.licenses">Open-Source-Lizenzen</a>
       </nav>
       <div class="footer-col">
-        <h4 data-i18n="footer.colContact">Kontakt</h4>
+        <h3 data-i18n="footer.colContact">Kontakt</h3>
         <a href="mailto:swissinnovationstudios@gmail.com">swissinnovationstudios@gmail.com</a>
-        <p>Swiss Innovation Studios<br>3013 Bern, Schweiz</p>
+        <p>Swiss Innovation Studios<br>3013 Bern, <span data-i18n="legal.country">Schweiz</span></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Swiss Innovation Studios</span>
+      <span>© <span data-year>2026</span> Swiss Innovation Studios</span>
       <span>Made with Three.js · Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>
 
-<script src="js/i18n.js?v=20261001"></script>
-<script src="js/main.js?v=20261001"></script>
+<script src="js/i18n.js?v=20261028"></script>
+<script src="js/main.js?v=20261028"></script>
 </body>
 </html>
